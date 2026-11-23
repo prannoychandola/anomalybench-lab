@@ -1,0 +1,2 @@
+Numenta Anomaly Benchmark (NAB) v1.1 files from https://github.com/numenta/NAB, revision ea702d75cc2258d9d7dd35ca8e5e2539d71f3140. See LICENSE.txt and data/README.md.
+
