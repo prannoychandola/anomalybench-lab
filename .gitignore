@@ -7,3 +7,5 @@ venv/
 node_modules/
 .nab-source/
 *.log
+_site/
+

@@ -9,6 +9,8 @@
 
 **Compare online anomaly detectors on the [Numenta Anomaly Benchmark (NAB) v1.1](https://github.com/numenta/NAB), inspect held-out results, and explore individual time series in a local dashboard.**
 
+🌐 **[Open the live dashboard](https://prannoychandola.github.io/anomalybench-lab/)** · **[View the source repository](https://github.com/prannoychandola/anomalybench-lab)**
+
 > **Research note:** This project is a transparent baseline study, not a state-of-the-art claim or a production alerting system. The checked-in scores are specific to the documented split and scoring setup.
 
 ---
@@ -143,3 +145,5 @@ These are simple statistical baselines, not deep-learning models. The held-out e
 ## 📚 Citation and Data License
 
 See [CITATION.md](CITATION.md) and [data/nab/SOURCE.txt](data/nab/SOURCE.txt) for the upstream revision, attribution, and paper citation. The upstream NAB license is preserved in [data/nab/LICENSE.txt](data/nab/LICENSE.txt). Project code is MIT licensed; see [LICENSE](LICENSE).
+
+

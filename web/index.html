@@ -4,10 +4,10 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A reproducible, held-out comparison of online anomaly detection baselines on the Numenta Anomaly Benchmark.">
   <title>AnomalyBench Lab — NAB streaming evaluation</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header><a class="brand" href="/"><span class="mark">A</span><span>ANOMALYBENCH <b>LAB</b></span></a><span class="local"><i></i> LOCAL · REPRODUCIBLE</span></header>
+  <header><a class="brand" href="./"><span class="mark">A</span><span>ANOMALYBENCH <b>LAB</b></span></a><span class="local"><i></i> REPRODUCIBLE · STATIC</span></header>
   <main>
     <section class="hero">
       <div class="eyebrow">TIME SERIES · ONLINE DETECTION · NAB v1.1</div>
@@ -30,9 +30,9 @@
     <section class="categories"><div class="section-title"><div><div class="eyebrow">03 / CATEGORY CHECK</div><h2>Performance by data family</h2></div><label class="compact">Detector<select id="categoryModelSelect" disabled></select></label></div><div id="categoryRows" class="category-rows"><div class="loading">Loading category results…</div></div></section>
 
     <section class="method"><div class="eyebrow">METHOD & LIMITS</div><p><b>Protocol.</b> NAB v1.1 files are split deterministically within each data category using SHA-256 file ordering. One score threshold per detector is selected on development files and then frozen for the held-out test set. The NAB time-window scoring formulation is used with the standard profile and NAB’s probationary period.</p><p><b>Interpretation.</b> The reported normalized score is corpus-local and uses this project’s fixed-threshold protocol. It is not an official NAB leaderboard result, whose protocol optimizes thresholds over its evaluation corpus. Point-level precision and F1 use the labeled windows as positives; the NAB score rewards early detections and penalizes false alarms differently.</p><p><b>Data.</b> The bundled NAB v1.1 series and labels are from Numenta. See the included source, license, and citation notes.</p></section>
-    <footer><span>ANOMALYBENCH LAB</span><span>Three simple baselines · No network calls · No training data leaves this machine</span></footer>
+    <footer><span>ANOMALYBENCH LAB</span><span>Three causal baselines · Static benchmark data · No user data is sent</span></footer>
   </main>
-  <script src="/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
 

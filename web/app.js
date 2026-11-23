@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 let report = null;
 let currentSeries = null;
+const pagesData = location.hostname.endsWith("github.io") ? "./data" : null;
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -11,7 +12,7 @@ function fixed(value,digits=2) { return value == null || !Number.isFinite(value)
 function setError(message) { $("datasetStatus").textContent="Benchmark unavailable"; $("datasetMeta").textContent=message; $("modelCards").innerHTML=`<div class="error-card">${escapeHtml(message)}</div>`; }
 
 async function loadReport() {
-  const response=await fetch("/api/report"); const data=await response.json();
+  const response=await fetch(pagesData ? `${pagesData}/report.json` : "/api/report"); const data=await response.json();
   if(!response.ok) throw new Error(data.error||"Could not read benchmark report.");
   report=data;
   $("datasetStatus").textContent=`${data.dataset.seriesCount} NAB series · ${data.dataset.observations.toLocaleString()} observations`;
@@ -55,7 +56,10 @@ function renderCategories() {
 async function loadSeries(file) {
   $("chart").innerHTML='<div class="loading">Loading source series…</div>';
   try {
-    const response=await fetch(`/api/series?file=${encodeURIComponent(file)}`),data=await response.json();
+    const seriesUrl=pagesData
+      ? `${pagesData}/series/${file.split("/").map(encodeURIComponent).join("/")}.json`
+      : `/api/series?file=${encodeURIComponent(file)}`;
+    const response=await fetch(seriesUrl),data=await response.json();
     if(!response.ok)throw new Error(data.error||"Could not load this series.");
     currentSeries=data; renderSeries();
   } catch(error) { $("chart").innerHTML=`<div class="error-card">${escapeHtml(error.message)}</div>`; }
