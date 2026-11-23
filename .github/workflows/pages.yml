@@ -28,6 +28,19 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+      - name: Check out pinned NAB benchmark source
+        uses: actions/checkout@v6
+        with:
+          repository: numenta/NAB
+          ref: ea702d75cc2258d9d7dd35ca8e5e2539d71f3140
+          path: .nab-source
+          sparse-checkout: |
+            data
+            labels/combined_windows.json
+      - name: Restore benchmark source files
+        run: |
+          cp -a .nab-source/data/. data/nab/
+          cp .nab-source/labels/combined_windows.json data/nab/combined_windows.json
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
