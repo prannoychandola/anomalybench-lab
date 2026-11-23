@@ -22,7 +22,9 @@ function parseSeriesCsv(text) {
   const headers = parseCsvLine(lines[0]).map(x => x.trim().toLowerCase());
   const timeIndex = headers.indexOf("timestamp");
   const valueIndex = headers.indexOf("value");
-  if (timeIndex < 0 || valueIndex < 0) throw new Error("CSV must have timestamp and value columns.");
+  if (timeIndex < 0 || valueIndex < 0) {
+    throw new Error(`CSV must have timestamp and value columns (found: ${JSON.stringify(headers)}).`);
+  }
   const records = lines.slice(1).map((line, i) => {
     const cells = parseCsvLine(line);
     const timestamp = cells[timeIndex]?.trim();
