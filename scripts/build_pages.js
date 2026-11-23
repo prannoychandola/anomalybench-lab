@@ -17,7 +17,12 @@ function writeJson(file, value) {
 }
 
 function buildSeries(entry) {
-  const records = parseSeriesCsv(fs.readFileSync(path.join(DATA, entry.file), "utf8"));
+  let records;
+  try {
+    records = parseSeriesCsv(fs.readFileSync(path.join(DATA, entry.file), "utf8"));
+  } catch (error) {
+    throw new Error(`${entry.file}: ${error.message}`);
+  }
   const rawWindows = LABELS[entry.file] || [];
   const models = {};
   for (const [name, detect] of Object.entries(DETECTORS)) {
