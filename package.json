@@ -1,0 +1,14 @@
+{
+  "name": "anomalybench-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproducible held-out anomaly detection benchmark on Numenta NAB v1.1",
+  "scripts": {
+    "start": "node server.js",
+    "benchmark": "node scripts/run_benchmark.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
