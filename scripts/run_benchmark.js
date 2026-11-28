@@ -96,7 +96,7 @@ function run() {
 
   const items=[];
   for(const file of filenames){
-    const records=parseSeriesCsv(fs.readFileSync(path.join(DATA,file),"utf8"));
+    let records; try { records=parseSeriesCsv(fs.readFileSync(path.join(DATA,file),"utf8")); } catch (error) { throw new Error(`Failed to parse ${file}: ${error.message}`); }
     const values=records.map(x=>x.value), category=file.split("/")[0];
     const windows=locateWindows(records,labels[file]||[]);
     const scores={}, runtimeMs={};
