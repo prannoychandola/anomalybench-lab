@@ -1,0 +1,60 @@
+name: Project checks
+
+on:
+  push:
+    branches: [main, "codex/**"]
+    paths:
+      - "src/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - "results/nab-v1.1-report.json"
+      - "data/nab/**"
+      - ".github/workflows/tests.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - "results/nab-v1.1-report.json"
+      - ".github/workflows/tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm test
+
+  full-benchmark:
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Regenerate the held-out NAB report
+        run: npm run benchmark
+      - name: Print machine-readable report for audit
+        run: cat results/nab-v1.1-report.json
+      - name: Validate report fields and confidence intervals
+        run: |
+          node -e 'const r=require("./results/nab-v1.1-report.json"); if(r.schemaVersion!==3) throw Error("unexpected report schema"); if(!Number.isInteger(r.dataset.labeledWindows)||!Number.isInteger(r.test.windows)) throw Error("window counts must be integers"); if(r.dataset.seriesCount!==58||r.test.files!==43) throw Error("unexpected NAB split coverage"); for(const [name,m] of Object.entries(r.test.detectors)){if(!m.confidenceIntervals?.intervals?.nabStandard) throw Error(name+" missing bootstrap intervals")} console.log(JSON.stringify({series:r.dataset.seriesCount,observations:r.dataset.observations,labeledWindows:r.dataset.labeledWindows,testFiles:r.test.files,testWindows:r.test.windows,thresholds:r.methodology.thresholds,detectors:Object.fromEntries(Object.entries(r.test.detectors).map(([n,m])=>[n,{nab:m.nab.standard.normalized,eventRecall:m.events.recall,pointF1:m.point.f1,intervals:m.confidenceIntervals}]))},null,2))'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nab-v1.1-report
+          path: results/nab-v1.1-report.json
+          if-no-files-found: error

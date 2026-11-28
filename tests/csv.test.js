@@ -18,3 +18,15 @@ test("series parser rejects non-numeric values and missing headers",()=>{
   assert.throws(()=>parseSeriesCsv("time,reading\n2024-01-01 00:00:00,1\n"),/timestamp and value/);
 });
 
+
+test("missing timestamps are retained but cannot be used for label alignment",()=>{
+  const rows=parseSeriesCsv("timestamp,value\n2024-01-01 00:00:00,2\n,3\n2024-01-03 00:00:00,4\n");
+  assert.equal(rows.length,3);
+  assert.equal(rows[1].timestamp,null);
+  assert.equal(rows[1].time,null);
+  assert.deepEqual(rows.map(x=>x.value),[2,3,4]);
+});
+
+test("CSV parser rejects unterminated quotes",()=>{
+  assert.throws(()=>parseSeriesCsv('timestamp,value\n"2024-01-01 00:00:00,1\n'),/unterminated quoted field/);
+});
