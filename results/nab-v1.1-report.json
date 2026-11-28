@@ -1,14 +1,14 @@
 {
   "project": "AnomalyBench Lab",
-  "schemaVersion": 2,
-  "generatedAt": "2026-11-23T19:54:16.354Z",
+  "schemaVersion": 3,
+  "generatedAt": "2026-11-28T16:46:54.832Z",
   "dataset": {
     "name": "Numenta Anomaly Benchmark",
     "version": "v1.1",
     "revision": "ea702d75cc2258d9d7dd35ca8e5e2539d71f3140",
     "seriesCount": 58,
     "observations": 365558,
-    "labeledWindows": "0[object Object][object Object][object Object][object Object][object Object][object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object][object Object][object Object][object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object][object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object][object Object][object Object],[object Object][object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object],[object Object]",
+    "labeledWindows": 116,
     "scorableWindows": 116,
     "source": "https://github.com/numenta/NAB",
     "license": "MIT; see data/nab/LICENSE.txt"
@@ -22,43 +22,43 @@
         "developmentCurve": [
           {
             "threshold": 0.5,
-            "raw": -254.64484358638757
+            "raw": -201.72862314099265
           },
           {
             "threshold": 0.65,
-            "raw": -117.59098995766033
+            "raw": -109.30439893632952
           },
           {
             "threshold": 0.75,
-            "raw": -74.57598958339508
+            "raw": -86.22516552155072
           },
           {
             "threshold": 0.85,
-            "raw": -50.88650473264906
+            "raw": -67.70259153831259
           },
           {
             "threshold": 0.9,
-            "raw": -46.91190466496521
+            "raw": -63.339234981089945
           },
           {
             "threshold": 0.925,
-            "raw": -42.77302928112692
+            "raw": -59.530359448155416
           },
           {
             "threshold": 0.95,
-            "raw": -43.03642457703231
+            "raw": -60.3897473936784
           },
           {
             "threshold": 0.975,
-            "raw": -38.93541319634339
+            "raw": -56.71223777725059
           },
           {
             "threshold": 0.99,
-            "raw": -39.36025054981939
+            "raw": -58.83561489732926
           },
           {
             "threshold": 0.995,
-            "raw": -37.619898274579405
+            "raw": -55.31312819211908
           }
         ]
       },
@@ -112,43 +112,43 @@
         "developmentCurve": [
           {
             "threshold": 0.5,
-            "raw": -353.2959981253026
+            "raw": -325.0267989755237
           },
           {
             "threshold": 0.65,
-            "raw": -184.10085189747062
+            "raw": -191.7464640724344
           },
           {
             "threshold": 0.75,
-            "raw": -120.12405521788253
+            "raw": -142.21880594113856
           },
           {
             "threshold": 0.85,
-            "raw": -82.92504106349386
+            "raw": -108.70832621395691
           },
           {
             "threshold": 0.9,
-            "raw": -71.30462370177172
+            "raw": -97.74067747997094
           },
           {
             "threshold": 0.925,
-            "raw": -68.29181705603547
+            "raw": -92.29875809653011
           },
           {
             "threshold": 0.95,
-            "raw": -62.78977125874863
+            "raw": -86.84765344492166
           },
           {
             "threshold": 0.975,
-            "raw": -56.58961882829967
+            "raw": -80.95937796462611
           },
           {
             "threshold": 0.99,
-            "raw": -50.551621906756154
+            "raw": -75.25315180484101
           },
           {
             "threshold": 0.995,
-            "raw": -45.4315439836024
+            "raw": -69.96030977073565
           }
         ]
       }
@@ -175,62 +175,85 @@
       "reward_low_FP_rate",
       "reward_low_FN_rate"
     ],
+    "confidenceIntervals": "95% percentile cluster bootstrap over held-out series, 1,000 deterministic replicates; intervals summarize between-series variation.",
     "scoreCaveat": "Uses the NAB time-window scoring formulation and corpus-local null/perfect normalization. Scores are not leaderboard results; NAB leaderboard protocols optimize thresholds over their full corpus."
   },
   "development": {
     "files": 15,
     "observations": 98064,
-    "windows": "0[object Object][object Object],[object Object][object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object]",
+    "windows": 36,
     "detectors": {
       "Rolling robust z-score": {
         "nab": {
           "standard": {
-            "raw": -37.619898274579405,
-            "normalized": -2.2498587146936186,
+            "raw": -55.31312819211908,
+            "normalized": -26.823789155720945,
             "nullScore": -36,
             "perfectScore": 36,
             "windowCount": 36
           },
           "reward_low_FP_rate": {
-            "raw": -68.61908990466186,
-            "normalized": -45.30429153425259,
+            "raw": -104.2639648578255,
+            "normalized": -94.81106230253542,
             "nullScore": -36,
             "perfectScore": 36,
             "windowCount": 36
           },
           "reward_low_FN_rate": {
-            "raw": -57.619898274579405,
-            "normalized": 13.31490900501907,
+            "raw": -75.31312819211908,
+            "normalized": -3.0677112889991487,
             "nullScore": -72,
             "perfectScore": 36,
             "windowCount": 36
           }
         },
         "point": {
-          "precision": 0.21212121212121213,
-          "recall": 0.008248527048741296,
-          "f1": 0.01587956279645288,
-          "tp": 77,
-          "fp": 286,
-          "fn": 9258,
-          "tn": 79469
+          "precision": 0.17550274223034734,
+          "recall": 0.010283877878950187,
+          "f1": 0.019429265330904676,
+          "tp": 96,
+          "fp": 451,
+          "fn": 9239,
+          "tn": 79304
         },
         "events": {
           "total": 36,
           "detected": 16,
           "recall": 0.4444444444444444,
-          "meanDelayPoints": 132.9375,
-          "alertEpisodes": 198,
-          "matchedAlertEpisodes": 28,
-          "alertPrecision": 0.1414141414141414,
-          "falseAlertsPer1000CleanPoints": 2.131527803899442
+          "meanDelayPoints": 118.5,
+          "alertEpisodes": 315,
+          "matchedAlertEpisodes": 16,
+          "alertPrecision": 0.050793650793650794,
+          "falseAlertsPer1000CleanPoints": 3.7489812550937245
         },
         "runtime": {
-          "milliseconds": 583.9791000000009,
+          "milliseconds": 718.6981969999997,
           "observations": 98064,
-          "observationsPerSecond": 167923.81782156217
+          "observationsPerSecond": 136446.70378935157
         },
-        "files": 15
+        "files": 15,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -88.93087169681705,
+              "upper95": 15.589011724071785
+            },
+            "eventRecall": {
+              "lower95": 0.24242424242424243,
+              "upper95": 0.6666666666666666
+            },
+            "pointF1": {
+              "lower95": 0.006343165239454487,
+              "upper95": 0.0424419498692911
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 1.4821878336218244,
+              "upper95": 7.165441245252661
+            }
+          }
+        }
       },
       "Adaptive EWMA residual": {
         "nab": {
@@ -271,123 +294,189 @@
           "recall": 0.4722222222222222,
           "meanDelayPoints": 105.29411764705883,
           "alertEpisodes": 158,
-          "matchedAlertEpisodes": 25,
-          "alertPrecision": 0.15822784810126583,
-          "falseAlertsPer1000CleanPoints": 1.6676070465801516
+          "matchedAlertEpisodes": 17,
+          "alertPrecision": 0.10759493670886076,
+          "falseAlertsPer1000CleanPoints": 1.7679142373518901
         },
         "runtime": {
-          "milliseconds": 2.6214999999999407,
+          "milliseconds": 3.190561999998792,
           "observations": 98064,
-          "observationsPerSecond": 37407591.07381355
+          "observationsPerSecond": 30735650.960563418
         },
-        "files": 15
+        "files": 15,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": 2.880272777210432,
+              "upper95": 41.28711574603774
+            },
+            "eventRecall": {
+              "lower95": 0.2647058823529412,
+              "upper95": 0.6666666666666666
+            },
+            "pointF1": {
+              "lower95": 0.002765446474055745,
+              "upper95": 0.009345794392523366
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 0.8354410098536262,
+              "upper95": 3.204348178794516
+            }
+          }
+        }
       },
       "Seasonal residual (lag 48)": {
         "nab": {
           "standard": {
-            "raw": -45.4315439836024,
-            "normalized": -13.099366643892226,
+            "raw": -69.96030977073565,
+            "normalized": -47.16709690379951,
             "nullScore": -36,
             "perfectScore": 36,
             "windowCount": 36
           },
           "reward_low_FP_rate": {
-            "raw": -78.5751086195749,
-            "normalized": -59.13209530496514,
+            "raw": -129.84483239441045,
+            "normalized": -130.34004499223673,
             "nullScore": -36,
             "perfectScore": 36,
             "windowCount": 36
           },
           "reward_low_FN_rate": {
-            "raw": -68.43154398360241,
-            "normalized": 3.3041259411088797,
+            "raw": -91.96030977073562,
+            "normalized": -18.481768306236685,
             "nullScore": -72,
             "perfectScore": 36,
             "windowCount": 36
           }
         },
         "point": {
-          "precision": 0.17962466487935658,
-          "recall": 0.007177289769683985,
-          "f1": 0.013803049031726411,
-          "tp": 67,
-          "fp": 306,
-          "fn": 9268,
-          "tn": 79449
+          "precision": 0.1359375,
+          "recall": 0.009319764327798607,
+          "f1": 0.017443609022556393,
+          "tp": 87,
+          "fp": 553,
+          "fn": 9248,
+          "tn": 79202
         },
         "events": {
           "total": 36,
-          "detected": 13,
-          "recall": 0.3611111111111111,
-          "meanDelayPoints": 149.23076923076923,
-          "alertEpisodes": 215,
-          "matchedAlertEpisodes": 26,
-          "alertPrecision": 0.12093023255813953,
-          "falseAlertsPer1000CleanPoints": 2.3697573819823208
+          "detected": 14,
+          "recall": 0.3888888888888889,
+          "meanDelayPoints": 130.42857142857142,
+          "alertEpisodes": 368,
+          "matchedAlertEpisodes": 14,
+          "alertPrecision": 0.03804347826086957,
+          "falseAlertsPer1000CleanPoints": 4.438593191649427
         },
         "runtime": {
-          "milliseconds": 585.9855999999995,
+          "milliseconds": 750.4905419999996,
           "observations": 98064,
-          "observationsPerSecond": 167348.8222236179
+          "observationsPerSecond": 130666.53676762799
         },
-        "files": 15
+        "files": 15,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -145.65393591616547,
+              "upper95": 11.154455762537465
+            },
+            "eventRecall": {
+              "lower95": 0.1891891891891892,
+              "upper95": 0.6216216216216216
+            },
+            "pointF1": {
+              "lower95": 0.00591105917932504,
+              "upper95": 0.0382686994781541
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 1.2222197304388778,
+              "upper95": 10.746170857564092
+            }
+          }
+        }
       }
     }
   },
   "test": {
     "files": 43,
     "observations": 267494,
-    "windows": "0[object Object][object Object][object Object][object Object][object Object][object Object],[object Object][object Object][object Object][object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object][object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object][object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object],[object Object]",
+    "windows": 80,
     "detectors": {
       "Rolling robust z-score": {
         "nab": {
           "standard": {
-            "raw": -372.61122854896536,
-            "normalized": -182.88201784310337,
+            "raw": -392.17254771598624,
+            "normalized": -195.10784232249142,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FP_rate": {
-            "raw": -749.6663276606621,
-            "normalized": -418.5414547879138,
+            "raw": -788.8334167455274,
+            "normalized": -443.0208854659546,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FN_rate": {
-            "raw": -407.6112285489653,
-            "normalized": -103.17134522873555,
+            "raw": -427.17254771598624,
+            "normalized": -111.32189488166094,
             "nullScore": -160,
             "perfectScore": 80,
             "windowCount": 80
           }
         },
         "point": {
-          "precision": 0.148756339048539,
-          "recall": 0.025496688741721854,
-          "f1": 0.04353203067029433,
-          "tp": 616,
-          "fp": 3525,
-          "fn": 23544,
-          "tn": 216067
+          "precision": 0.14739020464474592,
+          "recall": 0.026531456953642386,
+          "f1": 0.04496825563857028,
+          "tp": 641,
+          "fp": 3708,
+          "fn": 23519,
+          "tn": 215884
         },
         "events": {
           "total": 80,
           "detected": 45,
           "recall": 0.5625,
-          "meanDelayPoints": 128.46666666666667,
-          "alertEpisodes": 2004,
-          "matchedAlertEpisodes": 222,
-          "alertPrecision": 0.11077844311377245,
-          "falseAlertsPer1000CleanPoints": 8.115049728587563
+          "meanDelayPoints": 126.4888888888889,
+          "alertEpisodes": 2057,
+          "matchedAlertEpisodes": 45,
+          "alertPrecision": 0.021876519202722412,
+          "falseAlertsPer1000CleanPoints": 9.162446719370468
         },
         "runtime": {
-          "milliseconds": 1846.8179999999998,
+          "milliseconds": 2219.5096189999967,
           "observations": 267494,
-          "observationsPerSecond": 144840.47697174276
+          "observationsPerSecond": 120519.4146085836
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -365.6077446750625,
+              "upper95": -76.81208981804748
+            },
+            "eventRecall": {
+              "lower95": 0.43209876543209874,
+              "upper95": 0.6956521739130435
+            },
+            "pointF1": {
+              "lower95": 0.026035716433166975,
+              "upper95": 0.06845140032948929
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 3.8692584689809557,
+              "upper95": 16.60445359763161
+            }
+          }
+        }
       },
       "Adaptive EWMA residual": {
         "nab": {
@@ -428,66 +517,110 @@
           "recall": 0.5125,
           "meanDelayPoints": 130.14634146341464,
           "alertEpisodes": 394,
-          "matchedAlertEpisodes": 56,
-          "alertPrecision": 0.14213197969543148,
-          "falseAlertsPer1000CleanPoints": 1.53921818645488
+          "matchedAlertEpisodes": 41,
+          "alertPrecision": 0.10406091370558376,
+          "falseAlertsPer1000CleanPoints": 1.6075266858537653
         },
         "runtime": {
-          "milliseconds": 9.516599999999372,
+          "milliseconds": 13.032749999998778,
           "observations": 267494,
-          "observationsPerSecond": 28108147.86793788
+          "observationsPerSecond": 20524754.944276925
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": 10.138910577110932,
+              "upper95": 36.09940871740021
+            },
+            "eventRecall": {
+              "lower95": 0.36,
+              "upper95": 0.6705882352941176
+            },
+            "pointF1": {
+              "lower95": 0.0030535283520107485,
+              "upper95": 0.006313744536182613
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 0.9793528194255138,
+              "upper95": 2.3609266637155084
+            }
+          }
+        }
       },
       "Seasonal residual (lag 48)": {
         "nab": {
           "standard": {
-            "raw": -398.49744225561994,
-            "normalized": -199.06090140976247,
+            "raw": -410.89542240774205,
+            "normalized": -206.8096390048388,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FP_rate": {
-            "raw": -793.1359662903079,
-            "normalized": -445.7099789314425,
+            "raw": -817.9639419522953,
+            "normalized": -461.2274637201846,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FN_rate": {
-            "raw": -437.49744225561994,
-            "normalized": -115.62393427317497,
+            "raw": -449.89542240774205,
+            "normalized": -120.78975933655919,
             "nullScore": -160,
             "perfectScore": 80,
             "windowCount": 80
           }
         },
         "point": {
-          "precision": 0.1429566024599675,
-          "recall": 0.025496688741721854,
-          "f1": 0.043275141381853954,
-          "tp": 616,
-          "fp": 3693,
-          "fn": 23544,
-          "tn": 215899
+          "precision": 0.14308211473565804,
+          "recall": 0.02632450331125828,
+          "f1": 0.04446775039328789,
+          "tp": 636,
+          "fp": 3809,
+          "fn": 23524,
+          "tn": 215783
         },
         "events": {
           "total": 80,
           "detected": 41,
           "recall": 0.5125,
-          "meanDelayPoints": 130.4878048780488,
-          "alertEpisodes": 1457,
-          "matchedAlertEpisodes": 220,
-          "alertPrecision": 0.15099519560741248,
-          "falseAlertsPer1000CleanPoints": 5.633174250428067
+          "meanDelayPoints": 129.29268292682926,
+          "alertEpisodes": 1505,
+          "matchedAlertEpisodes": 41,
+          "alertPrecision": 0.02724252491694352,
+          "falseAlertsPer1000CleanPoints": 6.666909541331196
         },
         "runtime": {
-          "milliseconds": 1771.7890999999995,
+          "milliseconds": 2211.0865300000005,
           "observations": 267494,
-          "observationsPerSecond": 150973.95056781877
+          "observationsPerSecond": 120978.53085831061
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -390.0703910487727,
+              "upper95": -67.79876436656446
+            },
+            "eventRecall": {
+              "lower95": 0.3717948717948718,
+              "upper95": 0.65
+            },
+            "pointF1": {
+              "lower95": 0.024050208403200306,
+              "upper95": 0.06652085375971038
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 3.1180366427333497,
+              "upper95": 10.787799033664612
+            }
+          }
+        }
       }
     }
   },
@@ -495,26 +628,26 @@
     "artificialNoAnomaly": {
       "files": 4,
       "observations": 16128,
-      "windows": "0",
+      "windows": 0,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
             "standard": {
-              "raw": -45.20999999999987,
+              "raw": -47.84999999999986,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
               "windowCount": 0
             },
             "reward_low_FP_rate": {
-              "raw": -90.41999999999975,
+              "raw": -95.69999999999972,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
               "windowCount": 0
             },
             "reward_low_FN_rate": {
-              "raw": -45.20999999999987,
+              "raw": -47.84999999999986,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
@@ -526,9 +659,9 @@
             "recall": 0,
             "f1": 0,
             "tp": 0,
-            "fp": 411,
+            "fp": 435,
             "fn": 0,
-            "tn": 13301
+            "tn": 13277
           },
           "events": {
             "total": 0,
@@ -541,11 +674,27 @@
             "falseAlertsPer1000CleanPoints": 4.084014002333722
           },
           "runtime": {
-            "milliseconds": 87.07130000000004,
+            "milliseconds": 110.768917,
             "observations": 16128,
-            "observationsPerSecond": 185227.50894956195
+            "observationsPerSecond": 145600.41243339048
           },
-          "files": 4
+          "files": 4,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": null,
+              "eventRecall": null,
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 8.168028004667445
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -591,30 +740,46 @@
             "falseAlertsPer1000CleanPoints": 2.6254375729288215
           },
           "runtime": {
-            "milliseconds": 1.7983999999999725,
+            "milliseconds": 3.0046770000000222,
             "observations": 16128,
-            "observationsPerSecond": 8967971.530249247
+            "observationsPerSecond": 5367631.861927215
           },
-          "files": 4
+          "files": 4,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": null,
+              "eventRecall": null,
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 5.250875145857643
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
             "standard": {
-              "raw": -100.42999999999955,
+              "raw": -103.06999999999954,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
               "windowCount": 0
             },
             "reward_low_FP_rate": {
-              "raw": -200.8599999999991,
+              "raw": -206.13999999999908,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
               "windowCount": 0
             },
             "reward_low_FN_rate": {
-              "raw": -100.42999999999955,
+              "raw": -103.06999999999954,
               "normalized": null,
               "nullScore": 0,
               "perfectScore": 0,
@@ -626,9 +791,9 @@
             "recall": 0,
             "f1": 0,
             "tp": 0,
-            "fp": 913,
+            "fp": 937,
             "fn": 0,
-            "tn": 12799
+            "tn": 12775
           },
           "events": {
             "total": 0,
@@ -641,68 +806,106 @@
             "falseAlertsPer1000CleanPoints": 4.667444574095682
           },
           "runtime": {
-            "milliseconds": 88.33650000000002,
+            "milliseconds": 100.88220099999995,
             "observations": 16128,
-            "observationsPerSecond": 182574.58694876975
+            "observationsPerSecond": 159869.62853833858
           },
-          "files": 4
+          "files": 4,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": null,
+              "eventRecall": null,
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 10.501750291715286
+              }
+            }
+          }
         }
       }
     },
     "artificialWithAnomaly": {
       "files": 5,
       "observations": 20160,
-      "windows": "0[object Object][object Object][object Object][object Object][object Object]",
+      "windows": 5,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
             "standard": {
-              "raw": -60.368987640868916,
-              "normalized": -553.6898764086892,
+              "raw": -64.31109744724446,
+              "normalized": -593.1109744724447,
               "nullScore": -5,
               "perfectScore": 5,
               "windowCount": 5
             },
             "reward_low_FP_rate": {
-              "raw": -121.5528711362788,
-              "normalized": -1165.5287113627878,
+              "raw": -129.47206803417845,
+              "normalized": -1244.7206803417844,
               "nullScore": -5,
               "perfectScore": 5,
               "windowCount": 5
             },
             "reward_low_FN_rate": {
-              "raw": -62.368987640868916,
-              "normalized": -349.12658427245947,
+              "raw": -66.31109744724446,
+              "normalized": -375.4073163149631,
               "nullScore": -10,
               "perfectScore": 5,
               "windowCount": 5
             }
           },
           "point": {
-            "precision": 0.09516380655226209,
-            "recall": 0.030272952853598014,
-            "f1": 0.04593373493975904,
-            "tp": 61,
-            "fp": 580,
-            "fn": 1954,
-            "tn": 14545
+            "precision": 0.0951683748169839,
+            "recall": 0.03225806451612903,
+            "f1": 0.048183839881393624,
+            "tp": 65,
+            "fp": 618,
+            "fn": 1950,
+            "tn": 14507
           },
           "events": {
             "total": 5,
             "detected": 3,
             "recall": 0.6,
-            "meanDelayPoints": 112.33333333333333,
-            "alertEpisodes": 119,
-            "matchedAlertEpisodes": 9,
-            "alertPrecision": 0.07563025210084033,
-            "falseAlertsPer1000CleanPoints": 7.2727272727272725
+            "meanDelayPoints": 85,
+            "alertEpisodes": 143,
+            "matchedAlertEpisodes": 3,
+            "alertPrecision": 0.02097902097902098,
+            "falseAlertsPer1000CleanPoints": 9.25619834710744
           },
           "runtime": {
-            "milliseconds": 143.14879999999994,
+            "milliseconds": 164.96363299999985,
             "observations": 20160,
-            "observationsPerSecond": 140832.47641614886
+            "observationsPerSecond": 122208.75373179991
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -773.8008582528558,
+                "upper95": -387.3885033540085
+              },
+              "eventRecall": {
+                "lower95": 0.2,
+                "upper95": 1
+              },
+              "pointF1": {
+                "lower95": 0.008540372670807454,
+                "upper95": 0.08809359944941501
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 6.413223140495868,
+                "upper95": 12.56198347107438
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -743,123 +946,189 @@
             "recall": 0.8,
             "meanDelayPoints": 134.5,
             "alertEpisodes": 81,
-            "matchedAlertEpisodes": 5,
-            "alertPrecision": 0.06172839506172839,
-            "falseAlertsPer1000CleanPoints": 5.024793388429752
+            "matchedAlertEpisodes": 4,
+            "alertPrecision": 0.04938271604938271,
+            "falseAlertsPer1000CleanPoints": 5.090909090909091
           },
           "runtime": {
-            "milliseconds": 0.8684999999999832,
+            "milliseconds": 1.5694069999998987,
             "observations": 20160,
-            "observationsPerSecond": 23212435.23316107
+            "observationsPerSecond": 12845616.21045484
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -34.76219741903897,
+                "upper95": 27.155242407806888
+              },
+              "eventRecall": {
+                "lower95": 0.4,
+                "upper95": 1
+              },
+              "pointF1": {
+                "lower95": 0.0019221528111484864,
+                "upper95": 0.007557864903164856
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 3.6363636363636362,
+                "upper95": 6.677685950413223
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
             "standard": {
-              "raw": -37.27467030920014,
-              "normalized": -322.74670309200144,
+              "raw": -38.124569369291336,
+              "normalized": -331.24569369291333,
               "nullScore": -5,
               "perfectScore": 5,
               "windowCount": 5
             },
             "reward_low_FP_rate": {
-              "raw": -75.36423647294126,
-              "normalized": -703.6423647294125,
+              "raw": -77.08273613776034,
+              "normalized": -720.8273613776034,
               "nullScore": -5,
               "perfectScore": 5,
               "windowCount": 5
             },
             "reward_low_FN_rate": {
-              "raw": -39.27467030920014,
-              "normalized": -195.16446872800094,
+              "raw": -40.124569369291336,
+              "normalized": -200.83046246194223,
               "nullScore": -10,
               "perfectScore": 5,
               "windowCount": 5
             }
           },
           "point": {
-            "precision": 0.14754098360655737,
-            "recall": 0.031265508684863524,
-            "f1": 0.0515970515970516,
-            "tp": 63,
-            "fp": 364,
-            "fn": 1952,
-            "tn": 14761
+            "precision": 0.14840182648401826,
+            "recall": 0.03225806451612903,
+            "f1": 0.05299633102323685,
+            "tp": 65,
+            "fp": 373,
+            "fn": 1950,
+            "tn": 14752
           },
           "events": {
             "total": 5,
             "detected": 3,
             "recall": 0.6,
-            "meanDelayPoints": 112.33333333333333,
-            "alertEpisodes": 81,
-            "matchedAlertEpisodes": 6,
-            "alertPrecision": 0.07407407407407407,
-            "falseAlertsPer1000CleanPoints": 4.958677685950414
+            "meanDelayPoints": 101,
+            "alertEpisodes": 86,
+            "matchedAlertEpisodes": 3,
+            "alertPrecision": 0.03488372093023256,
+            "falseAlertsPer1000CleanPoints": 5.4876033057851235
           },
           "runtime": {
-            "milliseconds": 128.54250000000002,
+            "milliseconds": 161.68127099999992,
             "observations": 20160,
-            "observationsPerSecond": 156835.28793978642
+            "observationsPerSecond": 124689.76694276487
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -604.9012901123871,
+                "upper95": -83.29232810615648
+              },
+              "eventRecall": {
+                "lower95": 0.2,
+                "upper95": 1
+              },
+              "pointF1": {
+                "lower95": 0.009536194191590812,
+                "upper95": 0.09157368218545595
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 4.297520661157025,
+                "upper95": 6.743801652892562
+              }
+            }
+          }
         }
       }
     },
     "realAWSCloudwatch": {
       "files": 12,
       "observations": 47580,
-      "windows": "0[object Object],[object Object][object Object][object Object][object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object]",
+      "windows": 20,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
             "standard": {
-              "raw": -141.43670954981494,
-              "normalized": -303.59177387453735,
+              "raw": -150.3522952753651,
+              "normalized": -325.8807381884127,
               "nullScore": -20,
               "perfectScore": 20,
               "windowCount": 20
             },
             "reward_low_FP_rate": {
-              "raw": -289.79329015137677,
-              "normalized": -674.4832253784418,
+              "raw": -307.63393506815186,
+              "normalized": -719.0848376703796,
               "nullScore": -20,
               "perfectScore": 20,
               "windowCount": 20
             },
             "reward_low_FN_rate": {
-              "raw": -147.43670954981494,
-              "normalized": -179.06118258302487,
+              "raw": -156.3522952753651,
+              "normalized": -193.9204921256085,
               "nullScore": -40,
               "perfectScore": 20,
               "windowCount": 20
             }
           },
           "point": {
-            "precision": 0.19954648526077098,
-            "recall": 0.08189855746859004,
-            "f1": 0.11613328934345102,
-            "tp": 352,
-            "fp": 1412,
-            "fn": 3946,
-            "tn": 34741
+            "precision": 0.19483315392895587,
+            "recall": 0.08422522103303862,
+            "f1": 0.11760883690708251,
+            "tp": 362,
+            "fp": 1496,
+            "fn": 3936,
+            "tn": 34657
           },
           "events": {
             "total": 20,
             "detected": 14,
             "recall": 0.7,
-            "meanDelayPoints": 65.64285714285714,
-            "alertEpisodes": 880,
-            "matchedAlertEpisodes": 135,
-            "alertPrecision": 0.1534090909090909,
-            "falseAlertsPer1000CleanPoints": 20.606865267059444
+            "meanDelayPoints": 65.14285714285714,
+            "alertEpisodes": 907,
+            "matchedAlertEpisodes": 14,
+            "alertPrecision": 0.015435501653803748,
+            "falseAlertsPer1000CleanPoints": 24.70057809863635
           },
           "runtime": {
-            "milliseconds": 335.01060000000007,
+            "milliseconds": 395.78158599999927,
             "observations": 47580,
-            "observationsPerSecond": 142025.3568096054
+            "observationsPerSecond": 120217.82135159793
           },
-          "files": 12
+          "files": 12,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -596.6776094470401,
+                "upper95": -122.9302304744528
+              },
+              "eventRecall": {
+                "lower95": 0.47368421052631576,
+                "upper95": 0.9130434782608695
+              },
+              "pointF1": {
+                "lower95": 0.06316935923035033,
+                "upper95": 0.15996718621821163
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 13.419347814252273,
+                "upper95": 35.99676316270328
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -900,73 +1169,117 @@
             "recall": 0.5,
             "meanDelayPoints": 96.7,
             "alertEpisodes": 118,
-            "matchedAlertEpisodes": 13,
-            "alertPrecision": 0.11016949152542373,
-            "falseAlertsPer1000CleanPoints": 2.9043232926728075
+            "matchedAlertEpisodes": 10,
+            "alertPrecision": 0.0847457627118644,
+            "falseAlertsPer1000CleanPoints": 2.987303958177745
           },
           "runtime": {
-            "milliseconds": 1.335999999999899,
+            "milliseconds": 1.6332899999997608,
             "observations": 47580,
-            "observationsPerSecond": 35613772.45509251
+            "observationsPerSecond": 29131385.118384957
           },
-          "files": 12
+          "files": 12,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -12.450599188880744,
+                "upper95": 38.08264355624474
+              },
+              "eventRecall": {
+                "lower95": 0.2631578947368421,
+                "upper95": 0.8
+              },
+              "pointF1": {
+                "lower95": 0.0034283265481037067,
+                "upper95": 0.008438818565400843
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 1.5296023034011157,
+                "upper95": 4.437522040672388
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
             "standard": {
-              "raw": -160.95728775496463,
-              "normalized": -352.39321938741153,
+              "raw": -169.42536884699558,
+              "normalized": -373.563422117489,
               "nullScore": -20,
               "perfectScore": 20,
               "windowCount": 20
             },
             "reward_low_FP_rate": {
-              "raw": -328.32529836173075,
-              "normalized": -770.8132459043269,
+              "raw": -345.27477435889915,
+              "normalized": -813.1869358972478,
               "nullScore": -20,
               "perfectScore": 20,
               "windowCount": 20
             },
             "reward_low_FN_rate": {
-              "raw": -166.95728775496463,
-              "normalized": -211.5954795916077,
+              "raw": -175.42536884699558,
+              "normalized": -225.708948078326,
               "nullScore": -40,
               "perfectScore": 20,
               "windowCount": 20
             }
           },
           "point": {
-            "precision": 0.17117585848074923,
-            "recall": 0.07654723127035831,
-            "f1": 0.10578778135048232,
-            "tp": 329,
-            "fp": 1593,
-            "fn": 3969,
-            "tn": 34560
+            "precision": 0.1681592039800995,
+            "recall": 0.07864122847836202,
+            "f1": 0.10716550412175015,
+            "tp": 338,
+            "fp": 1672,
+            "fn": 3960,
+            "tn": 34481
           },
           "events": {
             "total": 20,
             "detected": 14,
             "recall": 0.7,
-            "meanDelayPoints": 70.07142857142857,
-            "alertEpisodes": 810,
-            "matchedAlertEpisodes": 133,
-            "alertPrecision": 0.16419753086419753,
-            "falseAlertsPer1000CleanPoints": 18.72597018228086
+            "meanDelayPoints": 69,
+            "alertEpisodes": 850,
+            "matchedAlertEpisodes": 14,
+            "alertPrecision": 0.01647058823529412,
+            "falseAlertsPer1000CleanPoints": 23.12394545404254
           },
           "runtime": {
-            "milliseconds": 314.4631000000003,
+            "milliseconds": 396.14185699999996,
             "observations": 47580,
-            "observationsPerSecond": 151305.5108850608
+            "observationsPerSecond": 120108.48931825956
           },
-          "files": 12
+          "files": 12,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -723.9565486803675,
+                "upper95": -119.03809213006839
+              },
+              "eventRecall": {
+                "lower95": 0.47368421052631576,
+                "upper95": 0.9230769230769231
+              },
+              "pointF1": {
+                "lower95": 0.061148977604673804,
+                "upper95": 0.1447555154173655
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 12.234933431742697,
+                "upper95": 34.41177218085242
+              }
+            }
+          }
         }
       }
     },
     "realAdExchange": {
       "files": 5,
       "observations": 7967,
-      "windows": "0[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object][object Object],[object Object],[object Object]",
+      "windows": 10,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
@@ -1007,16 +1320,38 @@
             "recall": 0.4,
             "meanDelayPoints": 26,
             "alertEpisodes": 13,
-            "matchedAlertEpisodes": 6,
-            "alertPrecision": 0.46153846153846156,
-            "falseAlertsPer1000CleanPoints": 1.170764341863188
+            "matchedAlertEpisodes": 4,
+            "alertPrecision": 0.3076923076923077,
+            "falseAlertsPer1000CleanPoints": 1.5052684395383844
           },
           "runtime": {
-            "milliseconds": 55.798699999999826,
+            "milliseconds": 68.07682299999988,
             "observations": 7967,
-            "observationsPerSecond": 142781.10421927436
+            "observationsPerSecond": 117029.55057112486
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 0,
+                "upper95": 53.04501616339737
+              },
+              "eventRecall": {
+                "lower95": 0,
+                "upper95": 0.6153846153846154
+              },
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0.03945745992601727
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 4.118616144975288
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -1062,11 +1397,33 @@
             "falseAlertsPer1000CleanPoints": 0.669008195350393
           },
           "runtime": {
-            "milliseconds": 0.1269999999999527,
+            "milliseconds": 0.24450499999989006,
             "observations": 7967,
-            "observationsPerSecond": 62732283.464590296
+            "observationsPerSecond": 32584200.73210602
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 13.300704195372587,
+                "upper95": 65.78234473609838
+              },
+              "eventRecall": {
+                "lower95": 0.14285714285714285,
+                "upper95": 0.7272727272727273
+              },
+              "pointF1": {
+                "lower95": 0.0024875621890547263,
+                "upper95": 0.022332506203473948
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 1.6477179106936892
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
@@ -1107,73 +1464,117 @@
             "recall": 0.4,
             "meanDelayPoints": 38.75,
             "alertEpisodes": 21,
-            "matchedAlertEpisodes": 6,
-            "alertPrecision": 0.2857142857142857,
-            "falseAlertsPer1000CleanPoints": 2.5087807325639737
+            "matchedAlertEpisodes": 4,
+            "alertPrecision": 0.19047619047619047,
+            "falseAlertsPer1000CleanPoints": 2.8432848302391704
           },
           "runtime": {
-            "milliseconds": 53.60269999999991,
+            "milliseconds": 66.8868510000002,
             "observations": 7967,
-            "observationsPerSecond": 148630.57271368816
+            "observationsPerSecond": 119111.60236860269
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 9.156012763062693,
+                "upper95": 50.82209250186841
+              },
+              "eventRecall": {
+                "lower95": 0.125,
+                "upper95": 0.6666666666666666
+              },
+              "pointF1": {
+                "lower95": 0.00495049504950495,
+                "upper95": 0.028950542822677925
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0.1658649859014762,
+                "upper95": 7.15950715950716
+              }
+            }
+          }
         }
       }
     },
     "realKnownCause": {
       "files": 5,
       "observations": 53926,
-      "windows": "0[object Object],[object Object][object Object][object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object]",
+      "windows": 12,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
             "standard": {
-              "raw": -89.10709651954872,
-              "normalized": -321.279568831453,
+              "raw": -89.54709651954872,
+              "normalized": -323.1129021647863,
               "nullScore": -12,
               "perfectScore": 12,
               "windowCount": 12
             },
             "reward_low_FP_rate": {
-              "raw": -174.7970960865048,
-              "normalized": -678.3212336937701,
+              "raw": -175.6770960865048,
+              "normalized": -681.9879003604367,
               "nullScore": -12,
               "perfectScore": 12,
               "windowCount": 12
             },
             "reward_low_FN_rate": {
-              "raw": -96.10709651954872,
-              "normalized": -200.29749033207978,
+              "raw": -96.54709651954872,
+              "normalized": -201.51971255430198,
               "nullScore": -24,
               "perfectScore": 12,
               "windowCount": 12
             }
           },
           "point": {
-            "precision": 0.06706586826347305,
-            "recall": 0.011135414595346987,
-            "f1": 0.01909959072305593,
-            "tp": 56,
-            "fp": 779,
-            "fn": 4973,
-            "tn": 44982
+            "precision": 0.0711743772241993,
+            "recall": 0.011930801352157487,
+            "f1": 0.020435967302452316,
+            "tp": 60,
+            "fp": 783,
+            "fn": 4969,
+            "tn": 44978
           },
           "events": {
             "total": 12,
             "detected": 5,
             "recall": 0.4166666666666667,
             "meanDelayPoints": 142.8,
-            "alertEpisodes": 769,
-            "matchedAlertEpisodes": 32,
-            "alertPrecision": 0.04161248374512354,
-            "falseAlertsPer1000CleanPoints": 16.105417276720353
+            "alertEpisodes": 771,
+            "matchedAlertEpisodes": 5,
+            "alertPrecision": 0.00648508430609598,
+            "falseAlertsPer1000CleanPoints": 16.73914468652346
           },
           "runtime": {
-            "milliseconds": 394.8680000000004,
+            "milliseconds": 466.2553670000002,
             "observations": 53926,
-            "observationsPerSecond": 136567.1566194271
+            "observationsPerSecond": 115657.64989896615
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -1528.119373577935,
+                "upper95": 35.99384622249072
+              },
+              "eventRecall": {
+                "lower95": 0.2,
+                "upper95": 0.7777777777777778
+              },
+              "pointF1": {
+                "lower95": 0.007070076939072573,
+                "upper95": 0.03236005207364702
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 42.39550469505479
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -1219,68 +1620,112 @@
             "falseAlertsPer1000CleanPoints": 0.152968685124888
           },
           "runtime": {
-            "milliseconds": 3.637600000000475,
+            "milliseconds": 3.3797419999996237,
             "observations": 53926,
-            "observationsPerSecond": 14824609.632722937
+            "observationsPerSecond": 15955655.786745261
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 0,
+                "upper95": 38.72167838408248
+              },
+              "eventRecall": {
+                "lower95": 0,
+                "upper95": 0.5454545454545454
+              },
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0.004405286343612334
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 0.9475465313028765
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
             "standard": {
-              "raw": -44.32949212058488,
-              "normalized": -134.70621716910367,
+              "raw": -44.879492120584885,
+              "normalized": -136.99788383577035,
               "nullScore": -12,
               "perfectScore": 12,
               "windowCount": 12
             },
             "reward_low_FP_rate": {
-              "raw": -83.37948364436593,
-              "normalized": -297.4145151848581,
+              "raw": -84.47948364436593,
+              "normalized": -301.99784851819135,
               "nullScore": -12,
               "perfectScore": 12,
               "windowCount": 12
             },
             "reward_low_FN_rate": {
-              "raw": -52.32949212058488,
-              "normalized": -78.69303366829133,
+              "raw": -52.879492120584885,
+              "normalized": -80.22081144606913,
               "nullScore": -24,
               "perfectScore": 12,
               "windowCount": 12
             }
           },
           "point": {
-            "precision": 0.12128712871287128,
-            "recall": 0.009743487770928615,
-            "f1": 0.018037916436591202,
-            "tp": 49,
-            "fp": 355,
-            "fn": 4980,
-            "tn": 45406
+            "precision": 0.12832929782082325,
+            "recall": 0.010538874527739113,
+            "f1": 0.01947813303932378,
+            "tp": 53,
+            "fp": 360,
+            "fn": 4976,
+            "tn": 45401
           },
           "events": {
             "total": 12,
             "detected": 4,
             "recall": 0.3333333333333333,
             "meanDelayPoints": 161.75,
-            "alertEpisodes": 277,
-            "matchedAlertEpisodes": 25,
-            "alertPrecision": 0.09025270758122744,
-            "falseAlertsPer1000CleanPoints": 5.506872664495968
+            "alertEpisodes": 281,
+            "matchedAlertEpisodes": 4,
+            "alertPrecision": 0.014234875444839857,
+            "falseAlertsPer1000CleanPoints": 6.0531893970848545
           },
           "runtime": {
-            "milliseconds": 373.6812,
+            "milliseconds": 461.48171,
             "observations": 53926,
-            "observationsPerSecond": 144310.1766960714
+            "observationsPerSecond": 116854.0352335957
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -655.5068322802975,
+                "upper95": 22.647622441290544
+              },
+              "eventRecall": {
+                "lower95": 0.07692307692307693,
+                "upper95": 0.75
+              },
+              "pointF1": {
+                "lower95": 0.00509987250318742,
+                "upper95": 0.034666666666666665
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0.02880682145532062,
+                "upper95": 14.724196029594902
+              }
+            }
+          }
         }
       }
     },
     "realTraffic": {
       "files": 5,
       "observations": 10664,
-      "windows": "0[object Object][object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object]",
+      "windows": 10,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
@@ -1326,11 +1771,33 @@
             "falseAlertsPer1000CleanPoints": 0.3753284123608157
           },
           "runtime": {
-            "milliseconds": 74.43909999999914,
+            "milliseconds": 91.16244899999947,
             "observations": 10664,
-            "observationsPerSecond": 143258.04583881484
+            "observationsPerSecond": 116977.98947898013
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -28.875000000000018,
+                "upper95": 25.47416061368915
+              },
+              "eventRecall": {
+                "lower95": 0,
+                "upper95": 0.3333333333333333
+              },
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0.01474201474201474
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 1.1873350923482848
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -1376,11 +1843,33 @@
             "falseAlertsPer1000CleanPoints": 0.25021894157387714
           },
           "runtime": {
-            "milliseconds": 0.17389999999932115,
+            "milliseconds": 0.2839019999996708,
             "observations": 10664,
-            "observationsPerSecond": 61322599.195179
+            "observationsPerSecond": 37562257.39872338
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 0,
+                "upper95": 50.26216579391707
+              },
+              "eventRecall": {
+                "lower95": 0,
+                "upper95": 0.5714285714285714
+              },
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0.007561436672967864
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 0.7919746568109821
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
@@ -1426,51 +1915,73 @@
             "falseAlertsPer1000CleanPoints": 0.12510947078693857
           },
           "runtime": {
-            "milliseconds": 70.18889999999965,
+            "milliseconds": 88.90081800000053,
             "observations": 10664,
-            "observationsPerSecond": 151932.8554799983
+            "observationsPerSecond": 119953.90188648138
           },
-          "files": 5
+          "files": 5,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 0,
+                "upper95": 40.39938176124908
+              },
+              "eventRecall": {
+                "lower95": 0,
+                "upper95": 0.42857142857142855
+              },
+              "pointF1": {
+                "lower95": 0,
+                "upper95": 0.01749271137026239
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0,
+                "upper95": 0.39577836411609496
+              }
+            }
+          }
         }
       }
     },
     "realTweets": {
       "files": 7,
       "observations": 111069,
-      "windows": "0[object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object][object Object],[object Object][object Object],[object Object],[object Object],[object Object],[object Object]",
+      "windows": 23,
       "detectors": {
         "Rolling robust z-score": {
           "nab": {
             "standard": {
-              "raw": -23.512340538406146,
-              "normalized": -1.1137837791437963,
+              "raw": -27.13596417350136,
+              "normalized": -8.991226464133392,
               "nullScore": -23,
               "perfectScore": 23,
               "windowCount": 23
             },
             "reward_low_FP_rate": {
-              "raw": -57.81728787063551,
-              "normalized": -75.68975624051198,
+              "raw": -65.06453514082595,
+              "normalized": -91.4446416104912,
               "nullScore": -23,
               "perfectScore": 23,
               "windowCount": 23
             },
             "reward_low_FN_rate": {
-              "raw": -28.512340538406143,
-              "normalized": 25.34443400230994,
+              "raw": -32.13596417350136,
+              "normalized": 20.092805545650208,
               "nullScore": -46,
               "perfectScore": 23,
               "windowCount": 23
             }
           },
           "point": {
-            "precision": 0.29694323144104806,
-            "recall": 0.012420091324200914,
-            "f1": 0.023842917251051896,
-            "tp": 136,
-            "fp": 322,
-            "fn": 10814,
-            "tn": 94547
+            "precision": 0.28714859437751006,
+            "recall": 0.013059360730593607,
+            "f1": 0.02498252969951083,
+            "tp": 143,
+            "fp": 355,
+            "fn": 10807,
+            "tn": 94514
           },
           "events": {
             "total": 23,
@@ -1478,16 +1989,38 @@
             "recall": 0.782608695652174,
             "meanDelayPoints": 202.55555555555554,
             "alertEpisodes": 163,
-            "matchedAlertEpisodes": 39,
-            "alertPrecision": 0.2392638036809816,
-            "falseAlertsPer1000CleanPoints": 1.3070655324710918
+            "matchedAlertEpisodes": 18,
+            "alertPrecision": 0.11042944785276074,
+            "falseAlertsPer1000CleanPoints": 1.5284234049057122
           },
           "runtime": {
-            "milliseconds": 756.4815000000003,
+            "milliseconds": 922.5008439999983,
             "observations": 111069,
-            "observationsPerSecond": 146823.15430053472
+            "observationsPerSecond": 120399.88984552106
           },
-          "files": 7
+          "files": 7,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -85.75800406982952,
+                "upper95": 58.153226462947664
+              },
+              "eventRecall": {
+                "lower95": 0.55,
+                "upper95": 0.9310344827586207
+              },
+              "pointF1": {
+                "lower95": 0.004123711340206185,
+                "upper95": 0.04833236778945625
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0.263033300015782,
+                "upper95": 2.996719380888291
+              }
+            }
+          }
         },
         "Adaptive EWMA residual": {
           "nab": {
@@ -1528,66 +2061,110 @@
             "recall": 0.782608695652174,
             "meanDelayPoints": 188.11111111111111,
             "alertEpisodes": 137,
-            "matchedAlertEpisodes": 29,
-            "alertPrecision": 0.2116788321167883,
-            "falseAlertsPer1000CleanPoints": 1.1384119153780476
+            "matchedAlertEpisodes": 18,
+            "alertPrecision": 0.13138686131386862,
+            "falseAlertsPer1000CleanPoints": 1.2543612771295154
           },
           "runtime": {
-            "milliseconds": 1.575199999999768,
+            "milliseconds": 2.9172269999999116,
             "observations": 111069,
-            "observationsPerSecond": 70511046.21636386
+            "observationsPerSecond": 38073485.539522074
           },
-          "files": 7
+          "files": 7,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": 29.956646260873548,
+                "upper95": 59.36457900629949
+              },
+              "eventRecall": {
+                "lower95": 0.5,
+                "upper95": 0.9642857142857143
+              },
+              "pointF1": {
+                "lower95": 0.002857142857142857,
+                "upper95": 0.007698505057738788
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0.4844961240310077,
+                "upper95": 2.126987469727282
+              }
+            }
+          }
         },
         "Seasonal residual (lag 48)": {
           "nab": {
             "standard": {
-              "raw": -43.20391157440675,
-              "normalized": -43.921546900884245,
+              "raw": -43.093911574406754,
+              "normalized": -43.68241646610164,
               "nullScore": -23,
               "perfectScore": 23,
               "windowCount": 23
             },
             "reward_low_FP_rate": {
-              "raw": -91.14651054881577,
-              "normalized": -148.14458814959949,
+              "raw": -90.92651054881577,
+              "normalized": -147.66632728003427,
               "nullScore": -23,
               "perfectScore": 23,
               "windowCount": 23
             },
             "reward_low_FN_rate": {
-              "raw": -51.20391157440675,
-              "normalized": -7.541900832473556,
+              "raw": -51.093911574406754,
+              "normalized": -7.382480542618483,
               "nullScore": -46,
               "perfectScore": 23,
               "windowCount": 23
             }
           },
           "point": {
-            "precision": 0.26785714285714285,
-            "recall": 0.015068493150684932,
-            "f1": 0.028531903856130036,
-            "tp": 165,
-            "fp": 451,
-            "fn": 10785,
-            "tn": 94418
+            "precision": 0.27419354838709675,
+            "recall": 0.015525114155251141,
+            "f1": 0.029386343993085567,
+            "tp": 170,
+            "fp": 450,
+            "fn": 10780,
+            "tn": 94419
           },
           "events": {
             "total": 23,
             "detected": 15,
             "recall": 0.6521739130434783,
             "meanDelayPoints": 214.46666666666667,
-            "alertEpisodes": 202,
-            "matchedAlertEpisodes": 49,
-            "alertPrecision": 0.24257425742574257,
-            "falseAlertsPer1000CleanPoints": 1.6127502134522342
+            "alertEpisodes": 201,
+            "matchedAlertEpisodes": 15,
+            "alertPrecision": 0.07462686567164178,
+            "falseAlertsPer1000CleanPoints": 1.9605982987066375
           },
           "runtime": {
-            "milliseconds": 742.9741999999997,
+            "milliseconds": 935.1118219999998,
             "observations": 111069,
-            "observationsPerSecond": 149492.40498526065
+            "observationsPerSecond": 118776.16920984666
           },
-          "files": 7
+          "files": 7,
+          "confidenceIntervals": {
+            "method": "series-level percentile bootstrap",
+            "replicates": 1000,
+            "intervals": {
+              "nabStandard": {
+                "lower95": -158.50039874863157,
+                "upper95": 41.774926745280034
+              },
+              "eventRecall": {
+                "lower95": 0.3333333333333333,
+                "upper95": 0.8947368421052632
+              },
+              "pointF1": {
+                "lower95": 0.0033231791747438386,
+                "upper95": 0.05978174916969794
+              },
+              "falseAlertsPer1000CleanPoints": {
+                "lower95": 0.18959143046734286,
+                "upper95": 4.2856992428949
+              }
+            }
+          }
         }
       }
     }
@@ -1598,52 +2175,74 @@
       "test": {
         "nab": {
           "standard": {
-            "raw": -372.61122854896536,
-            "normalized": -182.88201784310337,
+            "raw": -392.17254771598624,
+            "normalized": -195.10784232249142,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FP_rate": {
-            "raw": -749.6663276606621,
-            "normalized": -418.5414547879138,
+            "raw": -788.8334167455274,
+            "normalized": -443.0208854659546,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FN_rate": {
-            "raw": -407.6112285489653,
-            "normalized": -103.17134522873555,
+            "raw": -427.17254771598624,
+            "normalized": -111.32189488166094,
             "nullScore": -160,
             "perfectScore": 80,
             "windowCount": 80
           }
         },
         "point": {
-          "precision": 0.148756339048539,
-          "recall": 0.025496688741721854,
-          "f1": 0.04353203067029433,
-          "tp": 616,
-          "fp": 3525,
-          "fn": 23544,
-          "tn": 216067
+          "precision": 0.14739020464474592,
+          "recall": 0.026531456953642386,
+          "f1": 0.04496825563857028,
+          "tp": 641,
+          "fp": 3708,
+          "fn": 23519,
+          "tn": 215884
         },
         "events": {
           "total": 80,
           "detected": 45,
           "recall": 0.5625,
-          "meanDelayPoints": 128.46666666666667,
-          "alertEpisodes": 2004,
-          "matchedAlertEpisodes": 222,
-          "alertPrecision": 0.11077844311377245,
-          "falseAlertsPer1000CleanPoints": 8.115049728587563
+          "meanDelayPoints": 126.4888888888889,
+          "alertEpisodes": 2057,
+          "matchedAlertEpisodes": 45,
+          "alertPrecision": 0.021876519202722412,
+          "falseAlertsPer1000CleanPoints": 9.162446719370468
         },
         "runtime": {
-          "milliseconds": 1846.8179999999998,
+          "milliseconds": 2219.5096189999967,
           "observations": 267494,
-          "observationsPerSecond": 144840.47697174276
+          "observationsPerSecond": 120519.4146085836
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -365.6077446750625,
+              "upper95": -76.81208981804748
+            },
+            "eventRecall": {
+              "lower95": 0.43209876543209874,
+              "upper95": 0.6956521739130435
+            },
+            "pointF1": {
+              "lower95": 0.026035716433166975,
+              "upper95": 0.06845140032948929
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 3.8692584689809557,
+              "upper95": 16.60445359763161
+            }
+          }
+        }
       }
     },
     "Adaptive EWMA residual": {
@@ -1687,16 +2286,38 @@
           "recall": 0.5125,
           "meanDelayPoints": 130.14634146341464,
           "alertEpisodes": 394,
-          "matchedAlertEpisodes": 56,
-          "alertPrecision": 0.14213197969543148,
-          "falseAlertsPer1000CleanPoints": 1.53921818645488
+          "matchedAlertEpisodes": 41,
+          "alertPrecision": 0.10406091370558376,
+          "falseAlertsPer1000CleanPoints": 1.6075266858537653
         },
         "runtime": {
-          "milliseconds": 9.516599999999372,
+          "milliseconds": 13.032749999998778,
           "observations": 267494,
-          "observationsPerSecond": 28108147.86793788
+          "observationsPerSecond": 20524754.944276925
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": 10.138910577110932,
+              "upper95": 36.09940871740021
+            },
+            "eventRecall": {
+              "lower95": 0.36,
+              "upper95": 0.6705882352941176
+            },
+            "pointF1": {
+              "lower95": 0.0030535283520107485,
+              "upper95": 0.006313744536182613
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 0.9793528194255138,
+              "upper95": 2.3609266637155084
+            }
+          }
+        }
       }
     },
     "Seasonal residual (lag 48)": {
@@ -1704,52 +2325,74 @@
       "test": {
         "nab": {
           "standard": {
-            "raw": -398.49744225561994,
-            "normalized": -199.06090140976247,
+            "raw": -410.89542240774205,
+            "normalized": -206.8096390048388,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FP_rate": {
-            "raw": -793.1359662903079,
-            "normalized": -445.7099789314425,
+            "raw": -817.9639419522953,
+            "normalized": -461.2274637201846,
             "nullScore": -80,
             "perfectScore": 80,
             "windowCount": 80
           },
           "reward_low_FN_rate": {
-            "raw": -437.49744225561994,
-            "normalized": -115.62393427317497,
+            "raw": -449.89542240774205,
+            "normalized": -120.78975933655919,
             "nullScore": -160,
             "perfectScore": 80,
             "windowCount": 80
           }
         },
         "point": {
-          "precision": 0.1429566024599675,
-          "recall": 0.025496688741721854,
-          "f1": 0.043275141381853954,
-          "tp": 616,
-          "fp": 3693,
-          "fn": 23544,
-          "tn": 215899
+          "precision": 0.14308211473565804,
+          "recall": 0.02632450331125828,
+          "f1": 0.04446775039328789,
+          "tp": 636,
+          "fp": 3809,
+          "fn": 23524,
+          "tn": 215783
         },
         "events": {
           "total": 80,
           "detected": 41,
           "recall": 0.5125,
-          "meanDelayPoints": 130.4878048780488,
-          "alertEpisodes": 1457,
-          "matchedAlertEpisodes": 220,
-          "alertPrecision": 0.15099519560741248,
-          "falseAlertsPer1000CleanPoints": 5.633174250428067
+          "meanDelayPoints": 129.29268292682926,
+          "alertEpisodes": 1505,
+          "matchedAlertEpisodes": 41,
+          "alertPrecision": 0.02724252491694352,
+          "falseAlertsPer1000CleanPoints": 6.666909541331196
         },
         "runtime": {
-          "milliseconds": 1771.7890999999995,
+          "milliseconds": 2211.0865300000005,
           "observations": 267494,
-          "observationsPerSecond": 150973.95056781877
+          "observationsPerSecond": 120978.53085831061
         },
-        "files": 43
+        "files": 43,
+        "confidenceIntervals": {
+          "method": "series-level percentile bootstrap",
+          "replicates": 1000,
+          "intervals": {
+            "nabStandard": {
+              "lower95": -390.0703910487727,
+              "upper95": -67.79876436656446
+            },
+            "eventRecall": {
+              "lower95": 0.3717948717948718,
+              "upper95": 0.65
+            },
+            "pointF1": {
+              "lower95": 0.024050208403200306,
+              "upper95": 0.06652085375971038
+            },
+            "falseAlertsPer1000CleanPoints": {
+              "lower95": 3.1180366427333497,
+              "upper95": 10.787799033664612
+            }
+          }
+        }
       }
     }
   },
@@ -1759,16 +2402,16 @@
       "category": "artificialNoAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -32.999999999999886,
-            "reward_low_FP_rate": -65.99999999999977,
-            "reward_low_FN_rate": -32.999999999999886
+            "standard": -35.63999999999987,
+            "reward_low_FP_rate": -71.27999999999975,
+            "reward_low_FN_rate": -35.63999999999987
           },
           "windowCount": 0,
           "detectedEvents": 0,
@@ -1777,10 +2420,10 @@
           "matchedAlertEpisodes": 0,
           "falseAlertEpisodes": 24,
           "tp": 0,
-          "fp": 300,
+          "fp": 324,
           "fn": 0,
-          "tn": 3128,
-          "runtimeMs": 18.6278
+          "tn": 3104,
+          "runtimeMs": 29.233034999999997
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -1799,14 +2442,14 @@
           "fp": 24,
           "fn": 0,
           "tn": 3404,
-          "runtimeMs": 0.7635000000000076
+          "runtimeMs": 1.332225000000001
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -96.35999999999956,
-            "reward_low_FP_rate": -192.71999999999912,
-            "reward_low_FN_rate": -96.35999999999956
+            "standard": -98.99999999999955,
+            "reward_low_FP_rate": -197.9999999999991,
+            "reward_low_FN_rate": -98.99999999999955
           },
           "windowCount": 0,
           "detectedEvents": 0,
@@ -1815,10 +2458,10 @@
           "matchedAlertEpisodes": 0,
           "falseAlertEpisodes": 48,
           "tp": 0,
-          "fp": 876,
+          "fp": 900,
           "fn": 0,
-          "tn": 2552,
-          "runtimeMs": 21.5672
+          "tn": 2528,
+          "runtimeMs": 23.886583
         }
       }
     },
@@ -1827,16 +2470,16 @@
       "category": "artificialNoAnomaly",
       "split": "development",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -2.64,
-            "reward_low_FP_rate": -5.28,
-            "reward_low_FN_rate": -2.64
+            "standard": -7.92000000000001,
+            "reward_low_FP_rate": -15.84000000000002,
+            "reward_low_FN_rate": -7.92000000000001
           },
           "windowCount": 0,
           "detectedEvents": 0,
@@ -1845,10 +2488,10 @@
           "matchedAlertEpisodes": 0,
           "falseAlertEpisodes": 24,
           "tp": 0,
-          "fp": 24,
+          "fp": 72,
           "fn": 0,
-          "tn": 3404,
-          "runtimeMs": 10.96459999999999
+          "tn": 3356,
+          "runtimeMs": 14.24537699999999
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -1867,14 +2510,14 @@
           "fp": 24,
           "fn": 0,
           "tn": 3404,
-          "runtimeMs": 0.587299999999999
+          "runtimeMs": 0.5530110000000121
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -5.280000000000002,
-            "reward_low_FP_rate": -10.560000000000004,
-            "reward_low_FN_rate": -5.280000000000002
+            "standard": -15.83999999999997,
+            "reward_low_FP_rate": -31.67999999999994,
+            "reward_low_FN_rate": -15.83999999999997
           },
           "windowCount": 0,
           "detectedEvents": 0,
@@ -1883,10 +2526,10 @@
           "matchedAlertEpisodes": 0,
           "falseAlertEpisodes": 48,
           "tp": 0,
-          "fp": 48,
+          "fp": 144,
           "fn": 0,
-          "tn": 3380,
-          "runtimeMs": 11.688299999999998
+          "tn": 3284,
+          "runtimeMs": 13.991017
         }
       }
     },
@@ -1895,7 +2538,7 @@
       "category": "artificialNoAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -1916,7 +2559,7 @@
           "fp": 111,
           "fn": 0,
           "tn": 3317,
-          "runtimeMs": 30.208600000000004
+          "runtimeMs": 33.43653299999998
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -1935,7 +2578,7 @@
           "fp": 12,
           "fn": 0,
           "tn": 3416,
-          "runtimeMs": 0.2085999999999899
+          "runtimeMs": 0.7407070000000147
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -1954,7 +2597,7 @@
           "fp": 37,
           "fn": 0,
           "tn": 3391,
-          "runtimeMs": 29.724799999999988
+          "runtimeMs": 32.73224299999998
         }
       }
     },
@@ -1963,7 +2606,7 @@
       "category": "artificialNoAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -1984,7 +2627,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 8.28230000000002
+          "runtimeMs": 12.506692000000015
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2003,7 +2646,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 0.5316999999999723
+          "runtimeMs": 0.4690180000000055
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2022,7 +2665,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 8.207099999999997
+          "runtimeMs": 9.51541899999998
         }
       }
     },
@@ -2031,7 +2674,7 @@
       "category": "artificialNoAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2052,7 +2695,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 29.952600000000018
+          "runtimeMs": 35.592657
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2071,7 +2714,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 0.29460000000000264
+          "runtimeMs": 0.462727000000001
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2090,7 +2733,7 @@
           "fp": 0,
           "fn": 0,
           "tn": 3428,
-          "runtimeMs": 28.83740000000003
+          "runtimeMs": 34.74795599999999
         }
       }
     },
@@ -2099,35 +2742,28 @@
       "category": "artificialWithAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2679,
-          "end": 3081,
-          "rawStart": "2014-04-10 07:15:00.000000",
-          "rawEnd": "2014-04-11 16:45:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -18.454760087253774,
-            "reward_low_FP_rate": -37.90551702494035,
-            "reward_low_FN_rate": -18.454760087253774
+            "standard": -18.55218203573222,
+            "reward_low_FP_rate": -38.10036092189724,
+            "reward_low_FN_rate": -18.55218203573222
           },
           "windowCount": 1,
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 21,
           "alertEpisodes": 15,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 13,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 14,
           "tp": 34,
-          "fp": 180,
+          "fp": 182,
           "fn": 369,
-          "tn": 2845,
-          "runtimeMs": 29.106799999999964
+          "tn": 2843,
+          "runtimeMs": 33.380093999999985
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2140,32 +2776,32 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 21,
           "alertEpisodes": 22,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 20,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 21,
           "tp": 2,
           "fp": 20,
           "fn": 401,
           "tn": 3005,
-          "runtimeMs": 0.1694999999999709
+          "runtimeMs": 0.876920000000041
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -18.411323990157406,
-            "reward_low_FP_rate": -37.818644830747616,
-            "reward_low_FN_rate": -18.411323990157406
+            "standard": -18.508745938635855,
+            "reward_low_FP_rate": -38.01348872770451,
+            "reward_low_FN_rate": -18.508745938635855
           },
           "windowCount": 1,
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 21,
           "alertEpisodes": 14,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 12,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 13,
           "tp": 36,
-          "fp": 185,
+          "fp": 187,
           "fn": 367,
-          "tn": 2840,
-          "runtimeMs": 25.779499999999985
+          "tn": 2838,
+          "runtimeMs": 32.49207200000001
         }
       }
     },
@@ -2174,14 +2810,7 @@
       "category": "artificialWithAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2787,
-          "end": 3189,
-          "rawStart": "2014-04-10 16:15:00.000000",
-          "rawEnd": "2014-04-12 01:45:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2202,7 +2831,7 @@
           "fp": 130,
           "fn": 403,
           "tn": 2895,
-          "runtimeMs": 29.875200000000007
+          "runtimeMs": 34.47788000000003
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2221,7 +2850,7 @@
           "fp": 11,
           "fn": 402,
           "tn": 3014,
-          "runtimeMs": 0.17130000000003065
+          "runtimeMs": 0.07421899999997095
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2240,7 +2869,7 @@
           "fp": 82,
           "fn": 403,
           "tn": 2943,
-          "runtimeMs": 27.82929999999999
+          "runtimeMs": 36.415932
         }
       }
     },
@@ -2249,14 +2878,7 @@
       "category": "artificialWithAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2787,
-          "end": 3189,
-          "rawStart": "2014-04-10 16:15:00.000000",
-          "rawEnd": "2014-04-12 01:45:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2271,13 +2893,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 201,
           "alertEpisodes": 32,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 30,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 31,
           "tp": 20,
           "fp": 133,
           "fn": 383,
           "tn": 2892,
-          "runtimeMs": 32.21539999999999
+          "runtimeMs": 34.58286599999997
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2296,7 +2918,7 @@
           "fp": 11,
           "fn": 402,
           "tn": 3014,
-          "runtimeMs": 0.17859999999996035
+          "runtimeMs": 0.06982499999998026
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2315,7 +2937,7 @@
           "fp": 40,
           "fn": 385,
           "tn": 2985,
-          "runtimeMs": 27.21210000000002
+          "runtimeMs": 32.47034099999996
         }
       }
     },
@@ -2324,14 +2946,7 @@
       "category": "artificialWithAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2787,
-          "end": 3189,
-          "rawStart": "2014-04-10 16:15:00.000000",
-          "rawEnd": "2014-04-12 01:45:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2352,7 +2967,7 @@
           "fp": 117,
           "fn": 403,
           "tn": 2908,
-          "runtimeMs": 34.59949999999998
+          "runtimeMs": 40.11206199999992
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2371,7 +2986,7 @@
           "fp": 11,
           "fn": 403,
           "tn": 3014,
-          "runtimeMs": 0.17390000000000327
+          "runtimeMs": 0.07375999999999294
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2390,7 +3005,7 @@
           "fp": 53,
           "fn": 403,
           "tn": 2972,
-          "runtimeMs": 28.12489999999997
+          "runtimeMs": 33.10614199999998
         }
       }
     },
@@ -2399,35 +3014,28 @@
       "category": "artificialWithAnomaly",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1805,
-          "end": 2207,
-          "rawStart": "2014-04-07 06:25:00.000000",
-          "rawEnd": "2014-04-08 15:55:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -2.2510243836360138,
-            "reward_low_FP_rate": -5.472176258664494,
-            "reward_low_FN_rate": -2.2510243836360138
+            "standard": -5.4471741816662105,
+            "reward_low_FP_rate": -11.894180133545165,
+            "reward_low_FN_rate": -5.4471741816662105
           },
           "windowCount": 1,
           "detectedEvents": 1,
-          "meanDetectionDelayPoints": 95,
-          "alertEpisodes": 34,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 30,
-          "tp": 4,
-          "fp": 30,
-          "fn": 399,
-          "tn": 2995,
-          "runtimeMs": 11.57400000000007
+          "meanDetectionDelayPoints": 1,
+          "alertEpisodes": 69,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 68,
+          "tp": 10,
+          "fp": 60,
+          "fn": 393,
+          "tn": 2965,
+          "runtimeMs": 18.50552300000004
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2440,32 +3048,32 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 95,
           "alertEpisodes": 34,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 30,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 33,
           "tp": 4,
           "fp": 30,
           "fn": 399,
           "tn": 2995,
-          "runtimeMs": 0.1735999999999649
+          "runtimeMs": 0.5606970000000047
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -1,
-            "reward_low_FP_rate": -1,
-            "reward_low_FN_rate": -2
+            "standard": -11.794290388285916,
+            "reward_low_FP_rate": -24.58841254678457,
+            "reward_low_FN_rate": -11.794290388285916
           },
           "windowCount": 1,
-          "detectedEvents": 0,
-          "meanDetectionDelayPoints": null,
-          "alertEpisodes": 0,
-          "matchedAlertEpisodes": 0,
-          "falseAlertEpisodes": 0,
-          "tp": 0,
-          "fp": 0,
-          "fn": 403,
-          "tn": 3025,
-          "runtimeMs": 13.674200000000042
+          "detectedEvents": 1,
+          "meanDetectionDelayPoints": 1,
+          "alertEpisodes": 133,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 132,
+          "tp": 14,
+          "fp": 120,
+          "fn": 389,
+          "tn": 2905,
+          "runtimeMs": 17.079448999999954
         }
       }
     },
@@ -2474,35 +3082,28 @@
       "category": "artificialWithAnomaly",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2734,
-          "end": 3136,
-          "rawStart": "2014-04-10 11:50:00.000000",
-          "rawEnd": "2014-04-11 21:20:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -1.1316410239508836,
-            "reward_low_FP_rate": -3.221509227740241,
-            "reward_low_FN_rate": -1.1316410239508836
+            "standard": -4.976328881847994,
+            "reward_low_FP_rate": -10.945862228683026,
+            "reward_low_FN_rate": -4.976328881847994
           },
           "windowCount": 1,
           "detectedEvents": 1,
-          "meanDetectionDelayPoints": 115,
-          "alertEpisodes": 25,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 20,
-          "tp": 7,
-          "fp": 20,
-          "fn": 396,
-          "tn": 3005,
-          "runtimeMs": 17.3519
+          "meanDetectionDelayPoints": 33,
+          "alertEpisodes": 49,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 48,
+          "tp": 11,
+          "fp": 56,
+          "fn": 392,
+          "tn": 2969,
+          "runtimeMs": 22.41073099999994
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2521,26 +3122,26 @@
           "fp": 23,
           "fn": 402,
           "tn": 3002,
-          "runtimeMs": 0.175200000000018
+          "runtimeMs": 0.4746829999999136
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": 0.5194058360878974,
-            "reward_low_FP_rate": 0.08058449233732101,
-            "reward_low_FN_rate": 0.5194058360878974
+            "standard": -0.23307127552485196,
+            "reward_low_FP_rate": -1.443071275524852,
+            "reward_low_FN_rate": -0.23307127552485196
           },
           "windowCount": 1,
           "detectedEvents": 1,
-          "meanDetectionDelayPoints": 115,
-          "alertEpisodes": 7,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 4,
-          "tp": 9,
-          "fp": 4,
-          "fn": 394,
-          "tn": 3021,
-          "runtimeMs": 19.596700000000055
+          "meanDetectionDelayPoints": 81,
+          "alertEpisodes": 12,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 11,
+          "tp": 11,
+          "fp": 11,
+          "fn": 392,
+          "tn": 3014,
+          "runtimeMs": 27.19678399999998
         }
       }
     },
@@ -2549,41 +3150,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 3447,
-          "end": 3647,
-          "rawStart": "2014-02-26 13:45:00.000000",
-          "rawEnd": "2014-02-27 06:25:00.000000"
-        },
-        {
-          "start": 3677,
-          "end": 3877,
-          "rawStart": "2014-02-27 08:55:00.000000",
-          "rawEnd": "2014-02-28 01:35:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -14.590890061201815,
-            "reward_low_FP_rate": -31.04934638440357,
-            "reward_low_FN_rate": -14.590890061201815
+            "standard": -14.452660499776837,
+            "reward_low_FP_rate": -30.772887261553613,
+            "reward_low_FN_rate": -14.452660499776837
           },
           "windowCount": 2,
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 66.5,
           "alertEpisodes": 162,
-          "matchedAlertEpisodes": 19,
-          "falseAlertEpisodes": 143,
-          "tp": 20,
-          "fp": 154,
-          "fn": 382,
-          "tn": 2872,
-          "runtimeMs": 30.66039999999998
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 160,
+          "tp": 24,
+          "fp": 152,
+          "fn": 378,
+          "tn": 2874,
+          "runtimeMs": 38.014497000000006
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2596,13 +3184,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 100,
           "alertEpisodes": 14,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 11,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 12,
           "tp": 3,
           "fp": 11,
           "fn": 399,
           "tn": 3015,
-          "runtimeMs": 0.4861999999999398
+          "runtimeMs": 0.5348659999999654
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2615,13 +3203,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 86,
           "alertEpisodes": 78,
-          "matchedAlertEpisodes": 13,
-          "falseAlertEpisodes": 65,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 76,
           "tp": 16,
           "fp": 69,
           "fn": 386,
           "tn": 2957,
-          "runtimeMs": 29.254699999999957
+          "runtimeMs": 38.857304
         }
       }
     },
@@ -2630,20 +3218,7 @@
       "category": "realAWSCloudwatch",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1396,
-          "end": 1596,
-          "rawStart": "2014-02-19 10:50:00.000000",
-          "rawEnd": "2014-02-20 03:30:00.000000"
-        },
-        {
-          "start": 2559,
-          "end": 2759,
-          "rawStart": "2014-02-23 11:45:00.000000",
-          "rawEnd": "2014-02-24 04:25:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2664,7 +3239,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 32.103500000000054
+          "runtimeMs": 37.26998200000003
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2683,7 +3258,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 0.2316000000000713
+          "runtimeMs": 0.101071999999931
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2702,7 +3277,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 29.101999999999975
+          "runtimeMs": 35.21852200000001
         }
       }
     },
@@ -2711,20 +3286,7 @@
       "category": "realAWSCloudwatch",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1171,
-          "end": 1371,
-          "rawStart": "2014-02-18 16:02:00.000000",
-          "rawEnd": "2014-02-19 08:42:00.000000"
-        },
-        {
-          "start": 2830,
-          "end": 3030,
-          "rawStart": "2014-02-24 10:17:00.000000",
-          "rawEnd": "2014-02-25 02:57:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2745,7 +3307,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 30.505699999999933
+          "runtimeMs": 36.214647000000014
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2764,7 +3326,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 0.06380000000001473
+          "runtimeMs": 0.10807799999997769
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2783,7 +3345,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 29.166399999999953
+          "runtimeMs": 34.70121699999993
         }
       }
     },
@@ -2792,35 +3354,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1765,
-          "end": 2167,
-          "rawStart": "2014-04-08 17:30:00.000000",
-          "rawEnd": "2014-04-10 03:00:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -40.848300364548464,
-            "reward_low_FP_rate": -82.69591527955208,
-            "reward_low_FN_rate": -40.848300364548464
+            "standard": -41.178300778213526,
+            "reward_low_FP_rate": -83.3559161068822,
+            "reward_low_FN_rate": -41.178300778213526
           },
           "windowCount": 1,
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 4,
           "alertEpisodes": 139,
-          "matchedAlertEpisodes": 17,
-          "falseAlertEpisodes": 122,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 138,
           "tp": 100,
-          "fp": 405,
+          "fp": 408,
           "fn": 303,
-          "tn": 2620,
-          "runtimeMs": 29.722499999999968
+          "tn": 2617,
+          "runtimeMs": 36.32239500000003
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2833,13 +3388,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 4,
           "alertEpisodes": 12,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 10,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 11,
           "tp": 2,
           "fp": 12,
           "fn": 401,
           "tn": 3013,
-          "runtimeMs": 0.056500000000028194
+          "runtimeMs": 0.09952699999996639
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2852,13 +3407,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 1,
           "alertEpisodes": 140,
-          "matchedAlertEpisodes": 18,
-          "falseAlertEpisodes": 122,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 139,
           "tp": 83,
           "fp": 418,
           "fn": 320,
           "tn": 2607,
-          "runtimeMs": 27.809499999999957
+          "runtimeMs": 35.41277600000001
         }
       }
     },
@@ -2867,14 +3422,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1526,
-          "end": 1868,
-          "rawStart": "2014-04-15 07:24:00.000000",
-          "rawEnd": "2014-04-16 11:54:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2889,13 +3437,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 242,
           "alertEpisodes": 7,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 3,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 6,
           "tp": 16,
           "fp": 22,
           "fn": 327,
           "tn": 3063,
-          "runtimeMs": 30.595800000000054
+          "runtimeMs": 36.43309899999997
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2914,7 +3462,7 @@
           "fp": 1,
           "fn": 342,
           "tn": 3084,
-          "runtimeMs": 0.060899999999946886
+          "runtimeMs": 0.10580900000002202
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -2927,13 +3475,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 242,
           "alertEpisodes": 3,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 1,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 2,
           "tp": 19,
           "fp": 23,
           "fn": 324,
           "tn": 3062,
-          "runtimeMs": 29.25540000000001
+          "runtimeMs": 34.97512600000016
         }
       }
     },
@@ -2942,14 +3490,7 @@
       "category": "realAWSCloudwatch",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 3374,
-          "end": 3776,
-          "rawStart": "2014-04-14 07:49:00.000000",
-          "rawEnd": "2014-04-15 17:34:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -2970,7 +3511,7 @@
           "fp": 1,
           "fn": 392,
           "tn": 3024,
-          "runtimeMs": 30.889800000000037
+          "runtimeMs": 35.94644999999991
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -2989,7 +3530,7 @@
           "fp": 0,
           "fn": 403,
           "tn": 3025,
-          "runtimeMs": 0.06110000000001037
+          "runtimeMs": 0.10407299999997122
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3008,7 +3549,7 @@
           "fp": 9,
           "fn": 393,
           "tn": 3016,
-          "runtimeMs": 28.411899999999946
+          "runtimeMs": 34.87589000000003
         }
       }
     },
@@ -3017,28 +3558,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [],
+      "labeledWindows": 0,
       "scorableWindows": 0,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -9.240000000000004,
-            "reward_low_FP_rate": -18.480000000000008,
-            "reward_low_FN_rate": -9.240000000000004
+            "standard": -9.020000000000005,
+            "reward_low_FP_rate": -18.04000000000001,
+            "reward_low_FN_rate": -9.020000000000005
           },
           "windowCount": 0,
           "detectedEvents": 0,
           "meanDetectionDelayPoints": null,
-          "alertEpisodes": 81,
+          "alertEpisodes": 79,
           "matchedAlertEpisodes": 0,
-          "falseAlertEpisodes": 81,
+          "falseAlertEpisodes": 79,
           "tp": 0,
-          "fp": 84,
+          "fp": 82,
           "fn": 0,
-          "tn": 3344,
-          "runtimeMs": 28.295799999999986
+          "tn": 3346,
+          "runtimeMs": 36.24150399999985
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3057,7 +3598,7 @@
           "fp": 12,
           "fn": 0,
           "tn": 3416,
-          "runtimeMs": 0.25940000000002783
+          "runtimeMs": 0.10797899999988658
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3076,7 +3617,7 @@
           "fp": 76,
           "fn": 0,
           "tn": 3352,
-          "runtimeMs": 27.918499999999995
+          "runtimeMs": 35.56071199999997
         }
       }
     },
@@ -3085,26 +3626,7 @@
       "category": "realAWSCloudwatch",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 698,
-          "end": 832,
-          "rawStart": "2014-02-17 00:37:00.000000",
-          "rawEnd": "2014-02-17 11:47:00.000000"
-        },
-        {
-          "start": 2064,
-          "end": 2198,
-          "rawStart": "2014-02-21 18:27:00.000000",
-          "rawEnd": "2014-02-22 05:37:00.000000"
-        },
-        {
-          "start": 2535,
-          "end": 2669,
-          "rawStart": "2014-02-23 09:42:00.000000",
-          "rawEnd": "2014-02-23 20:52:00.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3119,13 +3641,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 56.5,
           "alertEpisodes": 61,
-          "matchedAlertEpisodes": 7,
-          "falseAlertEpisodes": 54,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 59,
           "tp": 42,
           "fp": 161,
           "fn": 363,
           "tn": 2862,
-          "runtimeMs": 29.65650000000005
+          "runtimeMs": 35.240005999999994
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3144,7 +3666,7 @@
           "fp": 11,
           "fn": 403,
           "tn": 3012,
-          "runtimeMs": 0.057999999999992724
+          "runtimeMs": 0.10128200000008292
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3157,13 +3679,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 27.5,
           "alertEpisodes": 81,
-          "matchedAlertEpisodes": 7,
-          "falseAlertEpisodes": 74,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 79,
           "tp": 35,
           "fp": 169,
           "fn": 370,
           "tn": 2854,
-          "runtimeMs": 27.328199999999924
+          "runtimeMs": 34.374176000000034
         }
       }
     },
@@ -3172,35 +3694,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4730,
-      "windows": [
-        {
-          "start": 2399,
-          "end": 2871,
-          "rawStart": "2014-03-10 01:29:00.000000",
-          "rawEnd": "2014-03-11 16:49:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -5.098154724297301,
-            "reward_low_FP_rate": -11.179195503444324,
-            "reward_low_FN_rate": -5.098154724297301
+            "standard": -7.354555972804596,
+            "reward_low_FP_rate": -15.691998000458915,
+            "reward_low_FN_rate": -7.354555972804596
           },
           "windowCount": 1,
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 78,
-          "alertEpisodes": 35,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 30,
-          "tp": 11,
-          "fp": 58,
-          "fn": 462,
-          "tn": 3490,
-          "runtimeMs": 17.153500000000122
+          "alertEpisodes": 41,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 40,
+          "tp": 15,
+          "fp": 80,
+          "fn": 458,
+          "tn": 3468,
+          "runtimeMs": 20.577502000000095
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3213,32 +3728,32 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 78,
           "alertEpisodes": 23,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 21,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 22,
           "tp": 2,
           "fp": 34,
           "fn": 471,
           "tn": 3514,
-          "runtimeMs": 0.062300000000050204
+          "runtimeMs": 0.11318499999993037
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -9.246037250310929,
-            "reward_low_FP_rate": -19.474960555471576,
-            "reward_low_FN_rate": -9.246037250310929
+            "standard": -11.28158435174022,
+            "reward_low_FP_rate": -23.546054758330158,
+            "reward_low_FN_rate": -11.28158435174022
           },
           "windowCount": 1,
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 78,
-          "alertEpisodes": 55,
-          "matchedAlertEpisodes": 9,
-          "falseAlertEpisodes": 46,
-          "tp": 14,
-          "fp": 96,
-          "fn": 459,
-          "tn": 3452,
-          "runtimeMs": 18.048999999999978
+          "alertEpisodes": 65,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 64,
+          "tp": 19,
+          "fp": 116,
+          "fn": 454,
+          "tn": 3432,
+          "runtimeMs": 24.40622600000006
         }
       }
     },
@@ -3247,47 +3762,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1794,
-          "end": 1928,
-          "rawStart": "2014-04-08 19:55:00.000000",
-          "rawEnd": "2014-04-09 07:05:00.000000"
-        },
-        {
-          "start": 2239,
-          "end": 2373,
-          "rawStart": "2014-04-10 09:00:00.000000",
-          "rawEnd": "2014-04-10 20:10:00.000000"
-        },
-        {
-          "start": 2964,
-          "end": 3098,
-          "rawStart": "2014-04-12 21:25:00.000000",
-          "rawEnd": "2014-04-13 08:35:00.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -8.145288721294799,
-            "reward_low_FP_rate": -17.221244701869274,
-            "reward_low_FN_rate": -9.145288721294799
+            "standard": -14.72271882652575,
+            "reward_low_FP_rate": -30.38557837800601,
+            "reward_low_FN_rate": -15.72271882652575
           },
           "windowCount": 3,
           "detectedEvents": 2,
-          "meanDetectionDelayPoints": 34.5,
-          "alertEpisodes": 72,
-          "matchedAlertEpisodes": 17,
-          "falseAlertEpisodes": 55,
-          "tp": 41,
-          "fp": 94,
-          "fn": 364,
-          "tn": 2929,
-          "runtimeMs": 17.812599999999975
+          "meanDetectionDelayPoints": 31,
+          "alertEpisodes": 94,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 92,
+          "tp": 43,
+          "fp": 156,
+          "fn": 362,
+          "tn": 2867,
+          "runtimeMs": 23.07494799999995
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3306,26 +3802,26 @@
           "fp": 26,
           "fn": 405,
           "tn": 2997,
-          "runtimeMs": 0.0543999999999869
+          "runtimeMs": 0.0953629999999066
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -23.507423392449223,
-            "reward_low_FP_rate": -47.95615755496705,
-            "reward_low_FN_rate": -24.507423392449223
+            "standard": -29.389957383050863,
+            "reward_low_FP_rate": -59.73453934927692,
+            "reward_low_FN_rate": -30.389957383050863
           },
           "windowCount": 3,
           "detectedEvents": 2,
-          "meanDetectionDelayPoints": 30.5,
-          "alertEpisodes": 127,
-          "matchedAlertEpisodes": 20,
-          "falseAlertEpisodes": 107,
-          "tp": 31,
-          "fp": 235,
-          "fn": 374,
-          "tn": 2788,
-          "runtimeMs": 20.757100000000037
+          "meanDetectionDelayPoints": 23,
+          "alertEpisodes": 157,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 155,
+          "tp": 35,
+          "fp": 289,
+          "fn": 370,
+          "tn": 2734,
+          "runtimeMs": 27.804820999999947
         }
       }
     },
@@ -3334,14 +3830,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 1437,
-          "end": 1839,
-          "rawStart": "2014-04-14 23:59:00.000000",
-          "rawEnd": "2014-04-16 09:29:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3356,13 +3845,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 0,
           "alertEpisodes": 195,
-          "matchedAlertEpisodes": 40,
-          "falseAlertEpisodes": 155,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 194,
           "tp": 44,
           "fp": 159,
           "fn": 359,
           "tn": 2866,
-          "runtimeMs": 30.460600000000113
+          "runtimeMs": 35.81756899999982
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3381,7 +3870,7 @@
           "fp": 2,
           "fn": 402,
           "tn": 3023,
-          "runtimeMs": 0.06729999999993197
+          "runtimeMs": 0.09689099999991413
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3394,13 +3883,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 43,
           "alertEpisodes": 39,
-          "matchedAlertEpisodes": 14,
-          "falseAlertEpisodes": 25,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 38,
           "tp": 21,
           "fp": 41,
           "fn": 382,
           "tn": 2984,
-          "runtimeMs": 27.935000000000173
+          "runtimeMs": 33.02963599999998
         }
       }
     },
@@ -3409,20 +3898,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4730,
-      "windows": [
-        {
-          "start": 2490,
-          "end": 2726,
-          "rawStart": "2014-03-10 09:06:00.000000",
-          "rawEnd": "2014-03-11 04:46:00.000000"
-        },
-        {
-          "start": 3091,
-          "end": 3327,
-          "rawStart": "2014-03-12 11:11:00.000000",
-          "rawEnd": "2014-03-13 06:51:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3437,13 +3913,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 58,
           "alertEpisodes": 118,
-          "matchedAlertEpisodes": 25,
-          "falseAlertEpisodes": 93,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 116,
           "tp": 93,
           "fp": 316,
           "fn": 381,
           "tn": 3231,
-          "runtimeMs": 39.41439999999989
+          "runtimeMs": 44.578449999999975
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3462,26 +3938,26 @@
           "fp": 27,
           "fn": 472,
           "tn": 3520,
-          "runtimeMs": 0.0647999999998774
+          "runtimeMs": 0.11188000000015563
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -51.0514864373411,
-            "reward_low_FP_rate": -104.04262466888085,
-            "reward_low_FN_rate": -51.0514864373411
+            "standard": -51.601486437341094,
+            "reward_low_FP_rate": -105.14262466888084,
+            "reward_low_FN_rate": -51.601486437341094
           },
           "windowCount": 2,
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 53,
           "alertEpisodes": 210,
-          "matchedAlertEpisodes": 40,
-          "falseAlertEpisodes": 170,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 208,
           "tp": 105,
-          "fp": 492,
+          "fp": 497,
           "fn": 369,
-          "tn": 3055,
-          "runtimeMs": 35.72610000000009
+          "tn": 3050,
+          "runtimeMs": 45.10748599999988
         }
       }
     },
@@ -3490,20 +3966,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 683,
-          "end": 883,
-          "rawStart": "2014-04-12 09:04:00.000000",
-          "rawEnd": "2014-04-13 01:44:00.000000"
-        },
-        {
-          "start": 3582,
-          "end": 3782,
-          "rawStart": "2014-04-22 11:14:00.000000",
-          "rawEnd": "2014-04-23 03:54:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3524,7 +3987,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 30.0003999999999
+          "runtimeMs": 33.40510899999981
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3543,7 +4006,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 0.06539999999995416
+          "runtimeMs": 0.09430199999997058
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3562,7 +4025,7 @@
           "fp": 0,
           "fn": 402,
           "tn": 3026,
-          "runtimeMs": 26.275899999999865
+          "runtimeMs": 33.74530899999991
         }
       }
     },
@@ -3571,47 +4034,28 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4621,
-      "windows": [
-        {
-          "start": 1177,
-          "end": 1331,
-          "rawStart": "2014-01-20 02:05:00.000000",
-          "rawEnd": "2014-01-20 14:55:00.000000"
-        },
-        {
-          "start": 1492,
-          "end": 1646,
-          "rawStart": "2014-01-21 04:20:00.000000",
-          "rawEnd": "2014-01-21 17:10:00.000000"
-        },
-        {
-          "start": 3676,
-          "end": 3830,
-          "rawStart": "2014-01-28 18:20:00.000000",
-          "rawEnd": "2014-01-29 07:10:00.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -9.336354961727421,
-            "reward_low_FP_rate": -21.382132230193953,
-            "reward_low_FN_rate": -9.336354961727421
+            "standard": -9.446338481299241,
+            "reward_low_FP_rate": -21.602099269337593,
+            "reward_low_FN_rate": -9.446338481299241
           },
           "windowCount": 3,
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 59,
-          "alertEpisodes": 67,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 62,
+          "alertEpisodes": 68,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 65,
           "tp": 13,
-          "fp": 110,
+          "fp": 111,
           "fn": 452,
-          "tn": 3353,
-          "runtimeMs": 40.24410000000012
+          "tn": 3352,
+          "runtimeMs": 42.83172999999988
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3630,7 +4074,7 @@
           "fp": 5,
           "fn": 464,
           "tn": 3458,
-          "runtimeMs": 0.07739999999989777
+          "runtimeMs": 0.11616699999990487
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3643,13 +4087,13 @@
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 59.333333333333336,
           "alertEpisodes": 85,
-          "matchedAlertEpisodes": 14,
-          "falseAlertEpisodes": 71,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 82,
           "tp": 30,
           "fp": 134,
           "fn": 435,
           "tn": 3329,
-          "runtimeMs": 35.14200000000005
+          "runtimeMs": 40.87867200000005
         }
       }
     },
@@ -3658,20 +4102,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 1243,
-      "windows": [
-        {
-          "start": 218,
-          "end": 280,
-          "rawStart": "2013-10-10 10:35:00.000000",
-          "rawEnd": "2013-10-10 15:45:00.000000"
-        },
-        {
-          "start": 308,
-          "end": 370,
-          "rawStart": "2013-10-10 18:05:00.000000",
-          "rawEnd": "2013-10-10 23:15:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3692,7 +4123,7 @@
           "fp": 10,
           "fn": 126,
           "tn": 921,
-          "runtimeMs": 9.857299999999896
+          "runtimeMs": 11.737630999999965
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3711,7 +4142,7 @@
           "fp": 1,
           "fn": 126,
           "tn": 930,
-          "runtimeMs": 0.022900000000163345
+          "runtimeMs": 0.05316399999992427
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3730,7 +4161,7 @@
           "fp": 9,
           "fn": 126,
           "tn": 922,
-          "runtimeMs": 8.400000000000091
+          "runtimeMs": 10.827469000000065
         }
       }
     },
@@ -3739,20 +4170,7 @@
       "category": "realAWSCloudwatch",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2980,
-          "end": 3180,
-          "rawStart": "2014-02-24 22:50:00.000000",
-          "rawEnd": "2014-02-25 15:35:00.000000"
-        },
-        {
-          "start": 3479,
-          "end": 3679,
-          "rawStart": "2014-02-26 16:30:00.000000",
-          "rawEnd": "2014-02-27 09:10:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3767,13 +4185,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 100,
           "alertEpisodes": 3,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 0,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 2,
           "tp": 14,
           "fp": 0,
           "fn": 388,
           "tn": 3026,
-          "runtimeMs": 30.79320000000007
+          "runtimeMs": 36.747151999999915
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3792,7 +4210,7 @@
           "fp": 0,
           "fn": 401,
           "tn": 3026,
-          "runtimeMs": 0.05850000000009459
+          "runtimeMs": 0.10415700000021388
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3805,13 +4223,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 100,
           "alertEpisodes": 3,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 0,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 2,
           "tp": 10,
           "fp": 0,
           "fn": 392,
           "tn": 3026,
-          "runtimeMs": 27.93990000000008
+          "runtimeMs": 35.53631999999993
         }
       }
     },
@@ -3820,20 +4238,7 @@
       "category": "realAWSCloudwatch",
       "split": "development",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 846,
-          "end": 1046,
-          "rawStart": "2014-04-12 22:32:00.000000",
-          "rawEnd": "2014-04-13 15:12:00.000000"
-        },
-        {
-          "start": 2485,
-          "end": 2685,
-          "rawStart": "2014-04-18 15:07:00.000000",
-          "rawEnd": "2014-04-19 07:47:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3854,7 +4259,7 @@
           "fp": 0,
           "fn": 400,
           "tn": 3026,
-          "runtimeMs": 30.758199999999988
+          "runtimeMs": 37.89415000000008
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3873,7 +4278,7 @@
           "fp": 0,
           "fn": 401,
           "tn": 3026,
-          "runtimeMs": 0.05920000000014625
+          "runtimeMs": 0.1032230000000709
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3886,13 +4291,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 100,
           "alertEpisodes": 2,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 0,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 1,
           "tp": 4,
           "fp": 0,
           "fn": 398,
           "tn": 3026,
-          "runtimeMs": 28.222400000000107
+          "runtimeMs": 35.91859199999999
         }
       }
     },
@@ -3901,14 +4306,7 @@
       "category": "realAdExchange",
       "split": "test",
       "rows": 1624,
-      "windows": [
-        {
-          "start": 244,
-          "end": 406,
-          "rawStart": "2011-07-11 04:00:01.000000",
-          "rawEnd": "2011-07-17 22:00:01.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -3929,7 +4327,7 @@
           "fp": 0,
           "fn": 163,
           "tn": 1218,
-          "runtimeMs": 11.429699999999912
+          "runtimeMs": 14.200906000000032
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -3948,7 +4346,7 @@
           "fp": 0,
           "fn": 163,
           "tn": 1218,
-          "runtimeMs": 0.026499999999941792
+          "runtimeMs": 0.04565499999989697
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -3967,7 +4365,7 @@
           "fp": 0,
           "fn": 163,
           "tn": 1218,
-          "runtimeMs": 10.67229999999995
+          "runtimeMs": 13.343633000000182
         }
       }
     },
@@ -3976,20 +4374,7 @@
       "category": "realAdExchange",
       "split": "test",
       "rows": 1624,
-      "windows": [
-        {
-          "start": 565,
-          "end": 645,
-          "rawStart": "2011-07-24 14:00:01.000000",
-          "rawEnd": "2011-07-27 22:00:01.000000"
-        },
-        {
-          "start": 934,
-          "end": 1014,
-          "rawStart": "2011-08-09 00:00:01.000000",
-          "rawEnd": "2011-08-12 09:00:01.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4010,7 +4395,7 @@
           "fp": 0,
           "fn": 162,
           "tn": 1219,
-          "runtimeMs": 11.242199999999912
+          "runtimeMs": 13.608769999999822
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4029,7 +4414,7 @@
           "fp": 0,
           "fn": 162,
           "tn": 1219,
-          "runtimeMs": 0.02589999999986503
+          "runtimeMs": 0.05010900000002039
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4048,7 +4433,7 @@
           "fp": 0,
           "fn": 162,
           "tn": 1219,
-          "runtimeMs": 11.157399999999825
+          "runtimeMs": 13.922442000000046
         }
       }
     },
@@ -4057,26 +4442,7 @@
       "category": "realAdExchange",
       "split": "test",
       "rows": 1538,
-      "windows": [
-        {
-          "start": 271,
-          "end": 321,
-          "rawStart": "2011-07-13 09:15:01.000000",
-          "rawEnd": "2011-07-15 11:15:01.000000"
-        },
-        {
-          "start": 413,
-          "end": 463,
-          "rawStart": "2011-07-19 09:15:01.000000",
-          "rawEnd": "2011-07-21 11:15:01.000000"
-        },
-        {
-          "start": 952,
-          "end": 1002,
-          "rawStart": "2011-08-12 07:15:01.000000",
-          "rawEnd": "2011-08-14 13:15:01.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4097,7 +4463,7 @@
           "fp": 1,
           "fn": 149,
           "tn": 1154,
-          "runtimeMs": 10.680699999999888
+          "runtimeMs": 13.216182000000117
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4116,7 +4482,7 @@
           "fp": 1,
           "fn": 151,
           "tn": 1154,
-          "runtimeMs": 0.024499999999989086
+          "runtimeMs": 0.0505439999999453
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4135,7 +4501,7 @@
           "fp": 4,
           "fn": 151,
           "tn": 1151,
-          "runtimeMs": 10.4375
+          "runtimeMs": 13.213719999999967
         }
       }
     },
@@ -4144,14 +4510,7 @@
       "category": "realAdExchange",
       "split": "test",
       "rows": 1538,
-      "windows": [
-        {
-          "start": 1045,
-          "end": 1197,
-          "rawStart": "2011-08-16 10:15:01.000000",
-          "rawEnd": "2011-08-23 00:15:01.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4172,7 +4531,7 @@
           "fp": 0,
           "fn": 153,
           "tn": 1155,
-          "runtimeMs": 10.841000000000122
+          "runtimeMs": 12.939112000000023
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4191,7 +4550,7 @@
           "fp": 0,
           "fn": 152,
           "tn": 1155,
-          "runtimeMs": 0.02500000000009095
+          "runtimeMs": 0.047424999999975626
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4204,13 +4563,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 76,
           "alertEpisodes": 2,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 0,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 1,
           "tp": 2,
           "fp": 0,
           "fn": 151,
           "tn": 1155,
-          "runtimeMs": 10.017900000000054
+          "runtimeMs": 12.681789999999864
         }
       }
     },
@@ -4219,26 +4578,7 @@
       "category": "realAdExchange",
       "split": "test",
       "rows": 1643,
-      "windows": [
-        {
-          "start": 340,
-          "end": 394,
-          "rawStart": "2011-07-15 06:15:01.000000",
-          "rawEnd": "2011-07-17 12:15:01.000000"
-        },
-        {
-          "start": 749,
-          "end": 803,
-          "rawStart": "2011-08-01 07:15:01.000000",
-          "rawEnd": "2011-08-03 15:15:01.000000"
-        },
-        {
-          "start": 1249,
-          "end": 1303,
-          "rawStart": "2011-08-22 05:15:01.000000",
-          "rawEnd": "2011-08-24 11:15:01.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4253,13 +4593,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 27,
           "alertEpisodes": 10,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 6,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 8,
           "tp": 4,
           "fp": 6,
           "fn": 161,
           "tn": 1226,
-          "runtimeMs": 11.605099999999993
+          "runtimeMs": 14.111852999999883
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4278,7 +4618,7 @@
           "fp": 3,
           "fn": 163,
           "tn": 1229,
-          "runtimeMs": 0.025100000000065847
+          "runtimeMs": 0.050772000000051776
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4291,13 +4631,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 27,
           "alertEpisodes": 15,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 12,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 13,
           "tp": 3,
           "fp": 12,
           "fn": 162,
           "tn": 1220,
-          "runtimeMs": 11.317600000000084
+          "runtimeMs": 13.725266000000147
         }
       }
     },
@@ -4306,32 +4646,7 @@
       "category": "realAdExchange",
       "split": "development",
       "rows": 1643,
-      "windows": [
-        {
-          "start": 347,
-          "end": 387,
-          "rawStart": "2011-07-15 13:15:01.000000",
-          "rawEnd": "2011-07-17 05:15:01.000000"
-        },
-        {
-          "start": 729,
-          "end": 769,
-          "rawStart": "2011-07-31 11:15:01.000000",
-          "rawEnd": "2011-08-02 05:15:01.000000"
-        },
-        {
-          "start": 1256,
-          "end": 1296,
-          "rawStart": "2011-08-22 12:15:01.000000",
-          "rawEnd": "2011-08-24 04:15:01.000000"
-        },
-        {
-          "start": 1381,
-          "end": 1421,
-          "rawStart": "2011-08-27 17:15:01.000000",
-          "rawEnd": "2011-08-29 09:15:01.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4346,13 +4661,13 @@
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 20,
           "alertEpisodes": 8,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 3,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 5,
           "tp": 5,
           "fp": 3,
           "fn": 159,
           "tn": 1230,
-          "runtimeMs": 11.524400000000014
+          "runtimeMs": 14.098864999999932
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4371,7 +4686,7 @@
           "fp": 2,
           "fn": 161,
           "tn": 1231,
-          "runtimeMs": 0.02479999999991378
+          "runtimeMs": 0.052114999999957945
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4384,13 +4699,13 @@
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 20,
           "alertEpisodes": 14,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 10,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 11,
           "tp": 4,
           "fp": 10,
           "fn": 160,
           "tn": 1223,
-          "runtimeMs": 10.837099999999964
+          "runtimeMs": 13.564245000000255
         }
       }
     },
@@ -4399,20 +4714,7 @@
       "category": "realKnownCause",
       "split": "test",
       "rows": 7267,
-      "windows": [
-        {
-          "start": 3540,
-          "end": 3902,
-          "rawStart": "2013-12-15 07:00:00.000000",
-          "rawEnd": "2013-12-30 09:00:00.000000"
-        },
-        {
-          "start": 5999,
-          "end": 6361,
-          "rawStart": "2014-03-29 15:00:00.000000",
-          "rawEnd": "2014-04-20 22:00:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4433,7 +4735,7 @@
           "fp": 0,
           "fn": 726,
           "tn": 5791,
-          "runtimeMs": 52.51390000000015
+          "runtimeMs": 63.865702000000056
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4452,7 +4754,7 @@
           "fp": 0,
           "fn": 726,
           "tn": 5791,
-          "runtimeMs": 0.1670000000001437
+          "runtimeMs": 0.17904799999996612
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4471,7 +4773,7 @@
           "fp": 0,
           "fn": 726,
           "tn": 5791,
-          "runtimeMs": 50.93540000000007
+          "runtimeMs": 62.47192700000005
         }
       }
     },
@@ -4480,14 +4782,7 @@
       "category": "realKnownCause",
       "split": "test",
       "rows": 18050,
-      "windows": [
-        {
-          "start": 16551,
-          "end": 18049,
-          "rawStart": "2014-07-10 12:29:00.000000",
-          "rawEnd": "2014-07-15 17:19:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4502,13 +4797,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 8,
           "alertEpisodes": 758,
-          "matchedAlertEpisodes": 28,
-          "falseAlertEpisodes": 730,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 757,
           "tp": 37,
           "fp": 772,
           "fn": 1462,
           "tn": 15029,
-          "runtimeMs": 135.2284000000002
+          "runtimeMs": 157.91983299999993
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4527,7 +4822,7 @@
           "fp": 0,
           "fn": 1499,
           "tn": 15801,
-          "runtimeMs": 1.732200000000148
+          "runtimeMs": 2.3580329999999776
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4540,13 +4835,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 8,
           "alertEpisodes": 265,
-          "matchedAlertEpisodes": 22,
-          "falseAlertEpisodes": 243,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 264,
           "tp": 33,
           "fp": 336,
           "fn": 1466,
           "tn": 15465,
-          "runtimeMs": 127.61989999999992
+          "runtimeMs": 159.50914000000012
         }
       }
     },
@@ -4555,26 +4850,7 @@
       "category": "realKnownCause",
       "split": "test",
       "rows": 4032,
-      "windows": [
-        {
-          "start": 2014,
-          "end": 2148,
-          "rawStart": "2014-03-14 03:31:00.000000",
-          "rawEnd": "2014-03-14 14:41:00.000000"
-        },
-        {
-          "start": 3328,
-          "end": 3462,
-          "rawStart": "2014-03-18 17:06:00.000000",
-          "rawEnd": "2014-03-19 04:16:00.000000"
-        },
-        {
-          "start": 3956,
-          "end": 4031,
-          "rawStart": "2014-03-20 21:26:00.000000",
-          "rawEnd": "2014-03-21 03:41:00.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4595,7 +4871,7 @@
           "fp": 0,
           "fn": 345,
           "tn": 3082,
-          "runtimeMs": 29.76090000000022
+          "runtimeMs": 36.61196199999995
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4614,7 +4890,7 @@
           "fp": 0,
           "fn": 346,
           "tn": 3082,
-          "runtimeMs": 0.09169999999994616
+          "runtimeMs": 0.15526600000021062
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4633,7 +4909,7 @@
           "fp": 0,
           "fn": 346,
           "tn": 3082,
-          "runtimeMs": 27.97400000000016
+          "runtimeMs": 35.20977200000016
         }
       }
     },
@@ -4642,32 +4918,7 @@
       "category": "realKnownCause",
       "split": "test",
       "rows": 22695,
-      "windows": [
-        {
-          "start": 2126,
-          "end": 2692,
-          "rawStart": "2013-12-10 06:25:00.000000",
-          "rawEnd": "2013-12-12 05:35:00.000000"
-        },
-        {
-          "start": 3703,
-          "end": 4269,
-          "rawStart": "2013-12-15 17:50:00.000000",
-          "rawEnd": "2013-12-17 17:00:00.000000"
-        },
-        {
-          "start": 16057,
-          "end": 16623,
-          "rawStart": "2014-01-27 14:20:00.000000",
-          "rawEnd": "2014-01-29 13:30:00.000000"
-        },
-        {
-          "start": 19232,
-          "end": 19798,
-          "rawStart": "2014-02-07 14:55:00.000000",
-          "rawEnd": "2014-02-09 14:05:00.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 1,
       "detectors": {
@@ -4688,7 +4939,7 @@
           "fp": 0,
           "fn": 2252,
           "tn": 19677,
-          "runtimeMs": 166.50649999999996
+          "runtimeMs": 194.7267350000002
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4707,7 +4958,7 @@
           "fp": 0,
           "fn": 2268,
           "tn": 19677,
-          "runtimeMs": 1.513800000000174
+          "runtimeMs": 0.6370109999998022
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4726,7 +4977,7 @@
           "fp": 11,
           "fn": 2254,
           "tn": 19666,
-          "runtimeMs": 156.45749999999998
+          "runtimeMs": 191.0372699999998
         }
       }
     },
@@ -4735,38 +4986,7 @@
       "category": "realKnownCause",
       "split": "development",
       "rows": 10320,
-      "windows": [
-        {
-          "start": 5839,
-          "end": 6045,
-          "rawStart": "2014-10-30 15:30:00.000000",
-          "rawEnd": "2014-11-03 22:30:00.000000"
-        },
-        {
-          "start": 7080,
-          "end": 7286,
-          "rawStart": "2014-11-25 12:00:00.000000",
-          "rawEnd": "2014-11-29 19:00:00.000000"
-        },
-        {
-          "start": 8423,
-          "end": 8629,
-          "rawStart": "2014-12-23 11:30:00.000000",
-          "rawEnd": "2014-12-27 18:30:00.000000"
-        },
-        {
-          "start": 8731,
-          "end": 8937,
-          "rawStart": "2014-12-29 21:30:00.000000",
-          "rawEnd": "2015-01-03 04:30:00.000000"
-        },
-        {
-          "start": 9977,
-          "end": 10183,
-          "rawStart": "2015-01-24 20:30:00.000000",
-          "rawEnd": "2015-01-29 03:30:00.000000"
-        }
-      ],
+      "labeledWindows": 5,
       "scorableWindows": 5,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -4787,7 +5007,7 @@
           "fp": 0,
           "fn": 1035,
           "tn": 8535,
-          "runtimeMs": 64.36909999999989
+          "runtimeMs": 77.54765100000031
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4806,7 +5026,7 @@
           "fp": 0,
           "fn": 1035,
           "tn": 8535,
-          "runtimeMs": 0.45620000000008076
+          "runtimeMs": 0.22683600000027582
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -4825,7 +5045,7 @@
           "fp": 0,
           "fn": 1035,
           "tn": 8535,
-          "runtimeMs": 65.72479999999996
+          "runtimeMs": 81.98372100000006
         }
       }
     },
@@ -4834,41 +5054,28 @@
       "category": "realKnownCause",
       "split": "test",
       "rows": 1882,
-      "windows": [
-        {
-          "start": 669,
-          "end": 763,
-          "rawStart": "2014-07-15 04:35:00.000000",
-          "rawEnd": "2014-07-15 13:25:00.000000"
-        },
-        {
-          "start": 1240,
-          "end": 1334,
-          "rawStart": "2014-07-17 05:50:00.000000",
-          "rawEnd": "2014-07-18 06:45:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": 0.8395897481660481,
-            "reward_low_FP_rate": 0.06959018120958227,
-            "reward_low_FN_rate": 0.8395897481660481
+            "standard": 0.399589748166048,
+            "reward_low_FP_rate": -0.8104098187904181,
+            "reward_low_FN_rate": 0.399589748166048
           },
           "windowCount": 2,
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 48.5,
-          "alertEpisodes": 9,
+          "alertEpisodes": 11,
           "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 7,
-          "tp": 2,
-          "fp": 7,
-          "fn": 188,
-          "tn": 1403,
-          "runtimeMs": 10.858299999999872
+          "falseAlertEpisodes": 9,
+          "tp": 6,
+          "fp": 11,
+          "fn": 184,
+          "tn": 1399,
+          "runtimeMs": 13.131135000000086
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4887,26 +5094,26 @@
           "fp": 7,
           "fn": 188,
           "tn": 1403,
-          "runtimeMs": 0.1329000000000633
+          "runtimeMs": 0.05038399999966714
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": 0.7295897481660482,
-            "reward_low_FP_rate": -0.1504098187904177,
-            "reward_low_FN_rate": 0.7295897481660482
+            "standard": 0.17958974816604778,
+            "reward_low_FP_rate": -1.2504098187904185,
+            "reward_low_FN_rate": 0.17958974816604778
           },
           "windowCount": 2,
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 48.5,
-          "alertEpisodes": 10,
+          "alertEpisodes": 14,
           "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 8,
-          "tp": 2,
-          "fp": 8,
-          "fn": 188,
-          "tn": 1402,
-          "runtimeMs": 10.69439999999986
+          "falseAlertEpisodes": 12,
+          "tp": 6,
+          "fp": 13,
+          "fn": 184,
+          "tn": 1397,
+          "runtimeMs": 13.25360099999989
         }
       }
     },
@@ -4915,41 +5122,28 @@
       "category": "realKnownCause",
       "split": "development",
       "rows": 5315,
-      "windows": [
-        {
-          "start": 2243,
-          "end": 2507,
-          "rawStart": "2014-07-14 17:00:00.000000",
-          "rawEnd": "2014-07-15 15:00:00.000000"
-        },
-        {
-          "start": 2877,
-          "end": 3141,
-          "rawStart": "2014-07-16 21:50:00.000000",
-          "rawEnd": "2014-07-17 19:50:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -1.408907530863181,
-            "reward_low_FP_rate": -4.032121981948723,
-            "reward_low_FN_rate": -1.408907530863181
+            "standard": -3.6957433600668277,
+            "reward_low_FP_rate": -8.605793640356016,
+            "reward_low_FN_rate": -3.6957433600668277
           },
           "windowCount": 2,
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 190.5,
-          "alertEpisodes": 25,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 22,
-          "tp": 3,
-          "fp": 24,
-          "fn": 527,
-          "tn": 4011,
-          "runtimeMs": 17.27370000000019
+          "alertEpisodes": 34,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 32,
+          "tp": 7,
+          "fp": 45,
+          "fn": 523,
+          "tn": 3990,
+          "runtimeMs": 22.2216269999999
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -4962,32 +5156,32 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 109,
           "alertEpisodes": 24,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 19,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 22,
           "tp": 5,
           "fp": 20,
           "fn": 525,
           "tn": 4015,
-          "runtimeMs": 0.068000000000211
+          "runtimeMs": 0.1231990000001133
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -2.7096619707782095,
-            "reward_low_FP_rate": -6.63363086177878,
-            "reward_low_FN_rate": -2.7096619707782095
+            "standard": -5.025148090100364,
+            "reward_low_FP_rate": -11.565952810304587,
+            "reward_low_FN_rate": -5.025148090100364
           },
           "windowCount": 2,
           "detectedEvents": 2,
-          "meanDetectionDelayPoints": 190.5,
-          "alertEpisodes": 36,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 33,
-          "tp": 3,
-          "fp": 39,
-          "fn": 527,
-          "tn": 3996,
-          "runtimeMs": 19.126600000000053
+          "meanDetectionDelayPoints": 109,
+          "alertEpisodes": 49,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 47,
+          "tp": 9,
+          "fp": 63,
+          "fn": 521,
+          "tn": 3972,
+          "runtimeMs": 25.457582000000002
         }
       }
     },
@@ -4996,26 +5190,7 @@
       "category": "realTraffic",
       "split": "development",
       "rows": 2500,
-      "windows": [
-        {
-          "start": 387,
-          "end": 469,
-          "rawStart": "2015-07-27 10:56:00.000000",
-          "rawEnd": "2015-07-31 18:01:00.000000"
-        },
-        {
-          "start": 948,
-          "end": 1030,
-          "rawStart": "2015-08-17 11:51:00.000000",
-          "rawEnd": "2015-08-20 01:54:00.000000"
-        },
-        {
-          "start": 1485,
-          "end": 1567,
-          "rawStart": "2015-08-31 15:44:00.000000",
-          "rawEnd": "2015-09-01 13:06:00.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5036,7 +5211,7 @@
           "fp": 9,
           "fn": 247,
           "tn": 1867,
-          "runtimeMs": 16.507000000000062
+          "runtimeMs": 19.230481000000054
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5055,7 +5230,7 @@
           "fp": 3,
           "fn": 247,
           "tn": 1873,
-          "runtimeMs": 0.03929999999991196
+          "runtimeMs": 0.06096499999966909
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5074,7 +5249,7 @@
           "fp": 11,
           "fn": 249,
           "tn": 1865,
-          "runtimeMs": 16.247600000000148
+          "runtimeMs": 19.95180900000014
         }
       }
     },
@@ -5083,14 +5258,7 @@
       "category": "realTraffic",
       "split": "test",
       "rows": 2162,
-      "windows": [
-        {
-          "start": 438,
-          "end": 654,
-          "rawStart": "2015-08-09 17:57:00.000000",
-          "rawEnd": "2015-08-12 20:01:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5111,7 +5279,7 @@
           "fp": 14,
           "fn": 217,
           "tn": 1607,
-          "runtimeMs": 14.02769999999964
+          "runtimeMs": 16.617011999999704
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5130,7 +5298,7 @@
           "fp": 2,
           "fn": 216,
           "tn": 1619,
-          "runtimeMs": 0.036499999999705324
+          "runtimeMs": 0.05436199999985547
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5149,7 +5317,7 @@
           "fp": 1,
           "fn": 214,
           "tn": 1620,
-          "runtimeMs": 13.976400000000012
+          "runtimeMs": 17.357739000000038
         }
       }
     },
@@ -5158,14 +5326,7 @@
       "category": "realTraffic",
       "split": "test",
       "rows": 2380,
-      "windows": [
-        {
-          "start": 1645,
-          "end": 1883,
-          "rawStart": "2015-09-14 17:45:00.000000",
-          "rawEnd": "2015-09-15 17:24:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5186,7 +5347,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1784,
-          "runtimeMs": 18.78139999999985
+          "runtimeMs": 21.997419999999693
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5205,7 +5366,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1784,
-          "runtimeMs": 0.03899999999975989
+          "runtimeMs": 0.0640480000001844
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5224,7 +5385,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1784,
-          "runtimeMs": 16.242899999999736
+          "runtimeMs": 20.59112499999992
         }
       }
     },
@@ -5233,20 +5394,7 @@
       "category": "realTraffic",
       "split": "test",
       "rows": 2500,
-      "windows": [
-        {
-          "start": 2087,
-          "end": 2211,
-          "rawStart": "2015-09-16 00:59:00.000000",
-          "rawEnd": "2015-09-16 13:19:00.000000"
-        },
-        {
-          "start": 2335,
-          "end": 2459,
-          "rawStart": "2015-09-17 00:20:00.000000",
-          "rawEnd": "2015-09-17 13:10:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5267,7 +5415,7 @@
           "fp": 0,
           "fn": 250,
           "tn": 1875,
-          "runtimeMs": 18.32739999999967
+          "runtimeMs": 22.836600999999973
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5286,7 +5434,7 @@
           "fp": 0,
           "fn": 250,
           "tn": 1875,
-          "runtimeMs": 0.03849999999965803
+          "runtimeMs": 0.07033099999989645
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5305,7 +5453,7 @@
           "fp": 0,
           "fn": 250,
           "tn": 1875,
-          "runtimeMs": 17.302999999999884
+          "runtimeMs": 21.769377000000077
         }
       }
     },
@@ -5314,14 +5462,7 @@
       "category": "realTraffic",
       "split": "development",
       "rows": 2500,
-      "windows": [
-        {
-          "start": 2261,
-          "end": 2499,
-          "rawStart": "2015-09-16 18:40:00.000000",
-          "rawEnd": "2015-09-17 16:24:00.000000"
-        }
-      ],
+      "labeledWindows": 1,
       "scorableWindows": 1,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5342,7 +5483,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1886,
-          "runtimeMs": 16.57340000000022
+          "runtimeMs": 20.809086000000207
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5361,7 +5502,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1886,
-          "runtimeMs": 0.042000000000371074
+          "runtimeMs": 0.061018999999760126
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5380,7 +5521,7 @@
           "fp": 0,
           "fn": 239,
           "tn": 1886,
-          "runtimeMs": 16.03060000000005
+          "runtimeMs": 20.94012799999973
         }
       }
     },
@@ -5389,32 +5530,7 @@
       "category": "realTraffic",
       "split": "test",
       "rows": 1127,
-      "windows": [
-        {
-          "start": 303,
-          "end": 331,
-          "rawStart": "2015-09-11 15:34:00.000000",
-          "rawEnd": "2015-09-11 17:54:00.000000"
-        },
-        {
-          "start": 740,
-          "end": 768,
-          "rawStart": "2015-09-15 13:26:00.000000",
-          "rawEnd": "2015-09-15 15:54:00.000000"
-        },
-        {
-          "start": 909,
-          "end": 937,
-          "rawStart": "2015-09-16 13:04:00.000000",
-          "rawEnd": "2015-09-16 15:20:00.000000"
-        },
-        {
-          "start": 945,
-          "end": 973,
-          "rawStart": "2015-09-16 16:00:00.000000",
-          "rawEnd": "2015-09-16 18:20:00.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5435,7 +5551,7 @@
           "fp": 0,
           "fn": 116,
           "tn": 842,
-          "runtimeMs": 7.205500000000029
+          "runtimeMs": 9.377011000000039
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5454,7 +5570,7 @@
           "fp": 0,
           "fn": 116,
           "tn": 842,
-          "runtimeMs": 0.02080000000023574
+          "runtimeMs": 0.03311900000016976
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5473,7 +5589,7 @@
           "fp": 0,
           "fn": 116,
           "tn": 842,
-          "runtimeMs": 6.838799999999992
+          "runtimeMs": 8.774307000000135
         }
       }
     },
@@ -5482,20 +5598,7 @@
       "category": "realTraffic",
       "split": "test",
       "rows": 2495,
-      "windows": [
-        {
-          "start": 2084,
-          "end": 2208,
-          "rawStart": "2015-09-16 00:44:00.000000",
-          "rawEnd": "2015-09-16 13:14:00.000000"
-        },
-        {
-          "start": 2335,
-          "end": 2459,
-          "rawStart": "2015-09-17 00:30:00.000000",
-          "rawEnd": "2015-09-17 13:30:00.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5516,7 +5619,7 @@
           "fp": 0,
           "fn": 247,
           "tn": 1871,
-          "runtimeMs": 16.097099999999955
+          "runtimeMs": 20.33440500000006
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5535,7 +5638,7 @@
           "fp": 0,
           "fn": 249,
           "tn": 1871,
-          "runtimeMs": 0.039099999999962165
+          "runtimeMs": 0.06204199999956472
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5554,7 +5657,7 @@
           "fp": 0,
           "fn": 250,
           "tn": 1871,
-          "runtimeMs": 15.827800000000025
+          "runtimeMs": 20.408270000000357
         }
       }
     },
@@ -5563,32 +5666,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15902,
-      "windows": [
-        {
-          "start": 1235,
-          "end": 1631,
-          "rawStart": "2015-03-03 04:37:53.000000",
-          "rawEnd": "2015-03-04 13:37:53.000000"
-        },
-        {
-          "start": 2920,
-          "end": 3316,
-          "rawStart": "2015-03-09 01:02:53.000000",
-          "rawEnd": "2015-03-10 10:02:53.000000"
-        },
-        {
-          "start": 4761,
-          "end": 5157,
-          "rawStart": "2015-03-15 10:27:53.000000",
-          "rawEnd": "2015-03-16 19:27:53.000000"
-        },
-        {
-          "start": 9087,
-          "end": 9483,
-          "rawStart": "2015-03-30 10:57:53.000000",
-          "rawEnd": "2015-03-31 19:57:53.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5603,13 +5681,13 @@
           "detectedEvents": 4,
           "meanDetectionDelayPoints": 132.25,
           "alertEpisodes": 59,
-          "matchedAlertEpisodes": 9,
-          "falseAlertEpisodes": 50,
+          "matchedAlertEpisodes": 4,
+          "falseAlertEpisodes": 55,
           "tp": 45,
           "fp": 90,
           "fn": 1543,
           "tn": 13474,
-          "runtimeMs": 115.3766999999998
+          "runtimeMs": 134.09477199999992
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5622,13 +5700,13 @@
           "detectedEvents": 4,
           "meanDetectionDelayPoints": 101,
           "alertEpisodes": 49,
-          "matchedAlertEpisodes": 9,
-          "falseAlertEpisodes": 40,
+          "matchedAlertEpisodes": 4,
+          "falseAlertEpisodes": 45,
           "tp": 9,
           "fp": 41,
           "fn": 1579,
           "tn": 13523,
-          "runtimeMs": 0.21889999999984866
+          "runtimeMs": 0.33533600000009756
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5641,13 +5719,13 @@
           "detectedEvents": 4,
           "meanDetectionDelayPoints": 132.25,
           "alertEpisodes": 67,
-          "matchedAlertEpisodes": 13,
-          "falseAlertEpisodes": 54,
+          "matchedAlertEpisodes": 4,
+          "falseAlertEpisodes": 63,
           "tp": 48,
           "fp": 73,
           "fn": 1540,
           "tn": 13491,
-          "runtimeMs": 105.8761999999997
+          "runtimeMs": 133.55226099999982
         }
       }
     },
@@ -5656,32 +5734,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15831,
-      "windows": [
-        {
-          "start": 1796,
-          "end": 2190,
-          "rawStart": "2015-03-05 03:22:53.000000",
-          "rawEnd": "2015-03-06 12:12:53.000000"
-        },
-        {
-          "start": 3538,
-          "end": 3932,
-          "rawStart": "2015-03-11 04:32:53.000000",
-          "rawEnd": "2015-03-12 13:22:53.000000"
-        },
-        {
-          "start": 9598,
-          "end": 9992,
-          "rawStart": "2015-04-01 05:32:53.000000",
-          "rawEnd": "2015-04-02 14:22:53.000000"
-        },
-        {
-          "start": 11409,
-          "end": 11803,
-          "rawStart": "2015-04-07 12:27:53.000000",
-          "rawEnd": "2015-04-08 21:17:53.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5696,13 +5749,13 @@
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 228.33333333333334,
           "alertEpisodes": 6,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 2,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 3,
           "tp": 4,
           "fp": 3,
           "fn": 1576,
           "tn": 13498,
-          "runtimeMs": 110.71190000000024
+          "runtimeMs": 132.96022800000037
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5721,7 +5774,7 @@
           "fp": 5,
           "fn": 1577,
           "tn": 13496,
-          "runtimeMs": 0.228099999999813
+          "runtimeMs": 0.8745099999996455
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5734,13 +5787,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 197,
           "alertEpisodes": 8,
-          "matchedAlertEpisodes": 5,
-          "falseAlertEpisodes": 3,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 6,
           "tp": 5,
           "fp": 4,
           "fn": 1575,
           "tn": 13497,
-          "runtimeMs": 104.49850000000015
+          "runtimeMs": 134.44858000000022
         }
       }
     },
@@ -5749,26 +5802,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15902,
-      "windows": [
-        {
-          "start": 2872,
-          "end": 3402,
-          "rawStart": "2015-03-08 21:02:53.000000",
-          "rawEnd": "2015-03-10 17:12:53.000000"
-        },
-        {
-          "start": 5800,
-          "end": 6330,
-          "rawStart": "2015-03-19 01:02:53.000000",
-          "rawEnd": "2015-03-20 21:12:53.000000"
-        },
-        {
-          "start": 7768,
-          "end": 8298,
-          "rawStart": "2015-03-25 21:02:53.000000",
-          "rawEnd": "2015-03-27 17:12:53.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5789,7 +5823,7 @@
           "fp": 0,
           "fn": 1590,
           "tn": 13559,
-          "runtimeMs": 103.41429999999991
+          "runtimeMs": 135.19033799999943
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5808,7 +5842,7 @@
           "fp": 1,
           "fn": 1593,
           "tn": 13558,
-          "runtimeMs": 0.235700000000179
+          "runtimeMs": 0.34818300000006275
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5821,13 +5855,13 @@
           "detectedEvents": 1,
           "meanDetectionDelayPoints": 265,
           "alertEpisodes": 2,
-          "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 0,
+          "matchedAlertEpisodes": 1,
+          "falseAlertEpisodes": 1,
           "tp": 6,
           "fp": 0,
           "fn": 1587,
           "tn": 13559,
-          "runtimeMs": 103.87969999999996
+          "runtimeMs": 131.74357299999974
         }
       }
     },
@@ -5836,47 +5870,28 @@
       "category": "realTweets",
       "split": "development",
       "rows": 15853,
-      "windows": [
-        {
-          "start": 1462,
-          "end": 2193,
-          "rawStart": "2015-03-03 23:32:53.000000",
-          "rawEnd": "2015-03-06 12:27:53.000000"
-        },
-        {
-          "start": 7775,
-          "end": 8171,
-          "rawStart": "2015-03-25 21:37:53.000000",
-          "rawEnd": "2015-03-27 06:37:53.000000"
-        },
-        {
-          "start": 13349,
-          "end": 13745,
-          "rawStart": "2015-04-14 06:07:53.000000",
-          "rawEnd": "2015-04-15 15:07:53.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -0.27074342588463507,
-            "reward_low_FP_rate": -1.0349185207240645,
-            "reward_low_FN_rate": -1.270743425884635
+            "standard": -7.0909877161904475,
+            "reward_low_FP_rate": -14.904117940599727,
+            "reward_low_FN_rate": -8.090987716190448
           },
           "windowCount": 3,
           "detectedEvents": 2,
-          "meanDetectionDelayPoints": 355,
-          "alertEpisodes": 9,
+          "meanDetectionDelayPoints": 286.5,
+          "alertEpisodes": 81,
           "matchedAlertEpisodes": 2,
-          "falseAlertEpisodes": 7,
-          "tp": 2,
-          "fp": 7,
-          "fn": 1524,
-          "tn": 13570,
-          "runtimeMs": 80.80750000000035
+          "falseAlertEpisodes": 79,
+          "tp": 11,
+          "fp": 72,
+          "fn": 1515,
+          "tn": 13505,
+          "runtimeMs": 101.47310199999993
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5889,32 +5904,32 @@
           "detectedEvents": 3,
           "meanDetectionDelayPoints": 179.66666666666666,
           "alertEpisodes": 17,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 13,
+          "matchedAlertEpisodes": 3,
+          "falseAlertEpisodes": 14,
           "tp": 4,
           "fp": 13,
           "fn": 1522,
           "tn": 13564,
-          "runtimeMs": 0.3008999999997286
+          "runtimeMs": 0.34198299999934534
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": 0.4934316689547944,
-            "reward_low_FP_rate": 0.4934316689547944,
-            "reward_low_FN_rate": -0.5065683310452056
+            "standard": -0.36555761057040115,
+            "reward_low_FP_rate": -1.1355576105704013,
+            "reward_low_FN_rate": -1.3655576105704013
           },
           "windowCount": 3,
           "detectedEvents": 2,
-          "meanDetectionDelayPoints": 355,
-          "alertEpisodes": 3,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 0,
+          "meanDetectionDelayPoints": 379,
+          "alertEpisodes": 10,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 8,
           "tp": 3,
-          "fp": 0,
+          "fp": 7,
           "fn": 1523,
-          "tn": 13577,
-          "runtimeMs": 88.04629999999997
+          "tn": 13570,
+          "runtimeMs": 122.99223100000017
         }
       }
     },
@@ -5923,20 +5938,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15833,
-      "windows": [
-        {
-          "start": 4614,
-          "end": 5404,
-          "rawStart": "2015-03-14 22:12:53.000000",
-          "rawEnd": "2015-03-17 16:02:53.000000"
-        },
-        {
-          "start": 9926,
-          "end": 10716,
-          "rawStart": "2015-04-02 08:52:53.000000",
-          "rawEnd": "2015-04-05 02:42:53.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -5951,13 +5953,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 394.5,
           "alertEpisodes": 9,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 6,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 7,
           "tp": 5,
           "fp": 6,
           "fn": 1577,
           "tn": 13495,
-          "runtimeMs": 109.52320000000009
+          "runtimeMs": 133.8123229999992
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -5970,13 +5972,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 199.5,
           "alertEpisodes": 18,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 14,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 16,
           "tp": 4,
           "fp": 14,
           "fn": 1578,
           "tn": 13487,
-          "runtimeMs": 0.22580000000016298
+          "runtimeMs": 0.3520170000001599
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -5989,13 +5991,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 394.5,
           "alertEpisodes": 7,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 3,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 5,
           "tp": 5,
           "fp": 3,
           "fn": 1577,
           "tn": 13498,
-          "runtimeMs": 106.82830000000013
+          "runtimeMs": 134.45690699999977
         }
       }
     },
@@ -6004,26 +6006,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15842,
-      "windows": [
-        {
-          "start": 4106,
-          "end": 4743,
-          "rawStart": "2015-03-13 03:52:53.000000",
-          "rawEnd": "2015-03-15 08:57:53.000000"
-        },
-        {
-          "start": 6728,
-          "end": 7124,
-          "rawStart": "2015-03-22 06:22:53.000000",
-          "rawEnd": "2015-03-23 15:22:53.000000"
-        },
-        {
-          "start": 9399,
-          "end": 9795,
-          "rawStart": "2015-03-31 12:57:53.000000",
-          "rawEnd": "2015-04-01 21:57:53.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -6038,13 +6021,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 189.5,
           "alertEpisodes": 5,
-          "matchedAlertEpisodes": 4,
-          "falseAlertEpisodes": 1,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 3,
           "tp": 7,
           "fp": 1,
           "fn": 1425,
           "tn": 13659,
-          "runtimeMs": 112.35390000000052
+          "runtimeMs": 133.0989639999998
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -6057,13 +6040,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 309,
           "alertEpisodes": 9,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 6,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 7,
           "tp": 3,
           "fp": 6,
           "fn": 1429,
           "tn": 13654,
-          "runtimeMs": 0.22229999999944994
+          "runtimeMs": 0.33542899999974907
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -6082,7 +6065,7 @@
           "fp": 0,
           "fn": 1431,
           "tn": 13660,
-          "runtimeMs": 106.92050000000017
+          "runtimeMs": 134.90023500000007
         }
       }
     },
@@ -6091,20 +6074,7 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15893,
-      "windows": [
-        {
-          "start": 6812,
-          "end": 7606,
-          "rawStart": "2015-03-22 13:22:53.000000",
-          "rawEnd": "2015-03-25 07:32:53.000000"
-        },
-        {
-          "start": 14848,
-          "end": 15642,
-          "rawStart": "2015-04-19 11:02:53.000000",
-          "rawEnd": "2015-04-22 05:12:53.000000"
-        }
-      ],
+      "labeledWindows": 2,
       "scorableWindows": 2,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -6125,7 +6095,7 @@
           "fp": 9,
           "fn": 1589,
           "tn": 13544,
-          "runtimeMs": 106.27329999999984
+          "runtimeMs": 127.57297599999947
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -6138,13 +6108,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 201.5,
           "alertEpisodes": 12,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 9,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 10,
           "tp": 3,
           "fp": 9,
           "fn": 1587,
           "tn": 13544,
-          "runtimeMs": 0.22249999999985448
+          "runtimeMs": 0.34170300000005227
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -6163,7 +6133,7 @@
           "fp": 4,
           "fn": 1590,
           "tn": 13549,
-          "runtimeMs": 112.58960000000025
+          "runtimeMs": 130.74800700000014
         }
       }
     },
@@ -6172,26 +6142,7 @@
       "category": "realTweets",
       "split": "development",
       "rows": 15851,
-      "windows": [
-        {
-          "start": 5970,
-          "end": 6498,
-          "rawStart": "2015-03-19 15:12:53.000000",
-          "rawEnd": "2015-03-21 11:12:53.000000"
-        },
-        {
-          "start": 11568,
-          "end": 12096,
-          "rawStart": "2015-04-08 01:42:53.000000",
-          "rawEnd": "2015-04-09 21:42:53.000000"
-        },
-        {
-          "start": 13190,
-          "end": 13718,
-          "rawStart": "2015-04-13 16:52:53.000000",
-          "rawEnd": "2015-04-15 12:52:53.000000"
-        }
-      ],
+      "labeledWindows": 3,
       "scorableWindows": 3,
       "nonMonotonicTransitions": 0,
       "detectors": {
@@ -6206,13 +6157,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 192.5,
           "alertEpisodes": 28,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 25,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 26,
           "tp": 6,
           "fp": 27,
           "fn": 1581,
           "tn": 13487,
-          "runtimeMs": 112.70460000000003
+          "runtimeMs": 132.1986109999998
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -6225,13 +6176,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 192.5,
           "alertEpisodes": 29,
-          "matchedAlertEpisodes": 3,
-          "falseAlertEpisodes": 26,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 27,
           "tp": 4,
           "fp": 26,
           "fn": 1583,
           "tn": 13488,
-          "runtimeMs": 0.2282999999997628
+          "runtimeMs": 0.3357379999997647
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -6244,13 +6195,13 @@
           "detectedEvents": 2,
           "meanDetectionDelayPoints": 192.5,
           "alertEpisodes": 24,
-          "matchedAlertEpisodes": 6,
-          "falseAlertEpisodes": 18,
+          "matchedAlertEpisodes": 2,
+          "falseAlertEpisodes": 22,
           "tp": 8,
           "fp": 20,
           "fn": 1579,
           "tn": 13494,
-          "runtimeMs": 106.32839999999942
+          "runtimeMs": 132.85191099999975
         }
       }
     },
@@ -6259,53 +6210,28 @@
       "category": "realTweets",
       "split": "development",
       "rows": 15858,
-      "windows": [
-        {
-          "start": 950,
-          "end": 1346,
-          "rawStart": "2015-03-02 04:52:53.000000",
-          "rawEnd": "2015-03-03 13:52:53.000000"
-        },
-        {
-          "start": 1396,
-          "end": 1792,
-          "rawStart": "2015-03-03 18:02:53.000000",
-          "rawEnd": "2015-03-05 03:02:53.000000"
-        },
-        {
-          "start": 4101,
-          "end": 4497,
-          "rawStart": "2015-03-13 03:27:53.000000",
-          "rawEnd": "2015-03-14 12:27:53.000000"
-        },
-        {
-          "start": 11346,
-          "end": 11742,
-          "rawStart": "2015-04-07 07:12:53.000000",
-          "rawEnd": "2015-04-08 16:12:53.000000"
-        }
-      ],
+      "labeledWindows": 4,
       "scorableWindows": 4,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -4,
-            "reward_low_FP_rate": -4,
-            "reward_low_FN_rate": -8
+            "standard": -4.11,
+            "reward_low_FP_rate": -4.22,
+            "reward_low_FN_rate": -8.11
           },
           "windowCount": 4,
           "detectedEvents": 0,
           "meanDetectionDelayPoints": null,
-          "alertEpisodes": 0,
+          "alertEpisodes": 1,
           "matchedAlertEpisodes": 0,
-          "falseAlertEpisodes": 0,
+          "falseAlertEpisodes": 1,
           "tp": 0,
-          "fp": 0,
+          "fp": 1,
           "fn": 1588,
-          "tn": 13520,
-          "runtimeMs": 87.76710000000003
+          "tn": 13519,
+          "runtimeMs": 115.80263899999954
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -6324,7 +6250,7 @@
           "fp": 5,
           "fn": 1587,
           "tn": 13515,
-          "runtimeMs": 0.22739999999976135
+          "runtimeMs": 0.3572709999998551
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
@@ -6343,7 +6269,7 @@
           "fp": 0,
           "fn": 1588,
           "tn": 13520,
-          "runtimeMs": 96.05079999999998
+          "runtimeMs": 126.59005199999956
         }
       }
     },
@@ -6352,59 +6278,28 @@
       "category": "realTweets",
       "split": "test",
       "rows": 15866,
-      "windows": [
-        {
-          "start": 1027,
-          "end": 1343,
-          "rawStart": "2015-03-02 11:17:53.000000",
-          "rawEnd": "2015-03-03 13:37:53.000000"
-        },
-        {
-          "start": 1443,
-          "end": 1759,
-          "rawStart": "2015-03-03 21:57:53.000000",
-          "rawEnd": "2015-03-05 00:17:53.000000"
-        },
-        {
-          "start": 1782,
-          "end": 2098,
-          "rawStart": "2015-03-05 02:12:53.000000",
-          "rawEnd": "2015-03-06 04:32:53.000000"
-        },
-        {
-          "start": 7289,
-          "end": 7605,
-          "rawStart": "2015-03-24 05:07:53.000000",
-          "rawEnd": "2015-03-25 07:27:53.000000"
-        },
-        {
-          "start": 8707,
-          "end": 9023,
-          "rawStart": "2015-03-29 03:17:53.000000",
-          "rawEnd": "2015-03-30 05:37:53.000000"
-        }
-      ],
+      "labeledWindows": 5,
       "scorableWindows": 5,
       "nonMonotonicTransitions": 0,
       "detectors": {
         "Rolling robust z-score": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -18.46306610266567,
-            "reward_low_FP_rate": -41.34855979689764,
-            "reward_low_FN_rate": -18.46306610266567
+            "standard": -22.086689737760885,
+            "reward_low_FP_rate": -48.595807067088074,
+            "reward_low_FN_rate": -22.086689737760885
           },
           "windowCount": 5,
           "detectedEvents": 5,
           "meanDetectionDelayPoints": 141.8,
           "alertEpisodes": 74,
-          "matchedAlertEpisodes": 17,
-          "falseAlertEpisodes": 57,
-          "tp": 71,
-          "fp": 213,
-          "fn": 1514,
-          "tn": 13318,
-          "runtimeMs": 98.82819999999992
+          "matchedAlertEpisodes": 5,
+          "falseAlertEpisodes": 69,
+          "tp": 78,
+          "fp": 246,
+          "fn": 1507,
+          "tn": 13285,
+          "runtimeMs": 125.77124300000014
         },
         "Adaptive EWMA residual": {
           "threshold": 0.95,
@@ -6417,35 +6312,34 @@
           "detectedEvents": 5,
           "meanDetectionDelayPoints": 175.4,
           "alertEpisodes": 40,
-          "matchedAlertEpisodes": 7,
-          "falseAlertEpisodes": 33,
+          "matchedAlertEpisodes": 5,
+          "falseAlertEpisodes": 35,
           "tp": 7,
           "fp": 34,
           "fn": 1578,
           "tn": 13497,
-          "runtimeMs": 0.22190000000045984
+          "runtimeMs": 0.3300490000001446
         },
         "Seasonal residual (lag 48)": {
           "threshold": 0.995,
           "rawNabScores": {
-            "standard": -35.25100870536136,
-            "reward_low_FP_rate": -74.5658556186904,
-            "reward_low_FN_rate": -35.25100870536136
+            "standard": -35.14100870536136,
+            "reward_low_FP_rate": -74.34585561869041,
+            "reward_low_FN_rate": -35.14100870536136
           },
           "windowCount": 5,
           "detectedEvents": 5,
           "meanDetectionDelayPoints": 160.2,
-          "alertEpisodes": 113,
-          "matchedAlertEpisodes": 24,
-          "falseAlertEpisodes": 89,
-          "tp": 100,
-          "fp": 367,
-          "fn": 1485,
-          "tn": 13164,
-          "runtimeMs": 102.3813999999993
+          "alertEpisodes": 112,
+          "matchedAlertEpisodes": 5,
+          "falseAlertEpisodes": 107,
+          "tp": 105,
+          "fp": 366,
+          "fn": 1480,
+          "tn": 13165,
+          "runtimeMs": 135.26225900000009
         }
       }
     }
   ]
 }
-
