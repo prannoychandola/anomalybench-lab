@@ -5,6 +5,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white)
 ![Dependencies](https://img.shields.io/badge/Dependencies-None-2E7D32)
 ![Tests](https://img.shields.io/badge/Tests-Node%20Test%20Runner-4B8BBE)
+![CI](https://github.com/prannoychandola/anomalybench-lab/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 **Compare online anomaly detectors on the [Numenta Anomaly Benchmark (NAB) v1.1](https://github.com/numenta/NAB), inspect held-out results, and explore individual time series in a local dashboard.**
@@ -117,18 +118,29 @@ The benchmark processes the bundled NAB data locally and writes `results/nab-v1.
 
 ## 📊 Held-Out Results
 
-The checked-in run uses 15 development series to select thresholds and evaluates 43 held-out series. The corpus contains 365,558 observations.
+This pinned NAB v1.1 run selects thresholds using 15 development series and evaluates 43 held-out series. It covers 365,558 observations and 116 labeled/scorable windows: 36 development and 80 test windows. Test data is used only for evaluation.
 
-| Detector | Test threshold | NAB standard* | Event recall | Point F1 | False alert episodes / 1k clean points |
+| Detector | Threshold | NAB standard (95% CI) | Event recall (95% CI) | Point F1 (95% CI) | False alert episodes / 1k clean points |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Rolling robust z-score | 0.995 | -182.88 | 56.3% | 0.044 | 8.1 |
-| Adaptive EWMA residual | 0.950 | 23.51 | 51.2% | 0.005 | 1.5 |
-| Seasonal residual (lag 48) | 0.995 | -199.06 | 51.2% | 0.043 | 5.6 |
-| No-alert null baseline | — | 0.00 | 0.0% | 0.000 | 0.0 |
+| Rolling robust z-score | 0.995 | -195.11 (-365.608–-76.812) | 56.3% (0.432–0.696) | 0.0450 (0.026–0.068) | 9.2 |
+| Adaptive EWMA residual | 0.950 | 23.51 (10.139–36.099) | 51.2% (0.360–0.671) | 0.0046 (0.003–0.006) | 1.6 |
+| Seasonal residual (lag 48) | 0.995 | -206.81 (-390.070–-67.799) | 51.2% (0.372–0.650) | 0.0445 (0.024–0.067) | 6.7 |
 
-The EWMA baseline achieved the best NAB standard score in this split. The other detectors found a slightly larger share of labeled windows but produced more false alerts. Negative NAB scores mean the weighted false-alarm cost exceeded the reward for detections.
+Adaptive EWMA has the highest NAB standard score on this held-out split. Point-level F1 is much lower than event recall because one alert can count as detecting a long event window, while point-level recall counts the many remaining labeled observations as missed. Rolling robust z-score and seasonal residual find slightly more events but create many more separate alerts. Alert episodes are matched one-to-one to labeled events; repeated alerts inside one event are not all counted as successful matches.
 
-*The project implements NAB-style time-window scoring locally. Its normalized values use null and perfect baselines on this test split and are **not directly comparable** to NAB leaderboard results, which use a different threshold optimization protocol.
+### Category results — Adaptive EWMA
+
+| NAB category | Held-out series | NAB standard | Event recall | Point F1 | False alert episodes / 1k clean points |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| artificialNoAnomaly | 4 | — | — | 0.0000 | 2.63 |
+| artificialWithAnomaly | 5 | -3.8 | 80.0% | 0.0048 | 5.09 |
+| realAWSCloudwatch | 12 | 13.1 | 50.0% | 0.0059 | 2.99 |
+| realAdExchange | 5 | 44.4 | 50.0% | 0.0124 | 0.67 |
+| realKnownCause | 5 | 11.8 | 16.7% | 0.0008 | 0.15 |
+| realTraffic | 5 | 17.6 | 20.0% | 0.0037 | 0.25 |
+| realTweets | 7 | 46.7 | 78.3% | 0.0052 | 1.25 |
+
+The table shows between-category variation for one detector; all three detectors' category metrics are in the JSON report. The 95% intervals are deterministic series-level percentile bootstrap intervals (1,000 resamples). Normalized scores use corpus-local null/perfect baselines and are **not directly comparable** with NAB leaderboard results, which use a different threshold protocol. This is a held-out split of NAB v1.1, not new-domain validation or a state-of-the-art claim. Full thresholds, per-series and category outputs, and provenance are in [`results/nab-v1.1-report.json`](results/nab-v1.1-report.json).
 
 ## 🔬 Evaluation Notes
 
