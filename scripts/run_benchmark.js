@@ -26,7 +26,7 @@ function listCsv(dir, base = dir) {
 function chooseThreshold(devFiles, modelName) {
   const curve = CANDIDATE_THRESHOLDS.map(threshold => ({
     threshold,
-    raw: devFiles.reduce((sum, item) => sum + scoreNabProfile(item.records, item.scores[modelName], item.windows, PROFILES.standard, threshold).raw, 0),
+    raw: devFiles.reduce((sum, item) => sum + scoreNabProfile(item.records, item.scores[modelName], item.locatedWindows, PROFILES.standard, threshold).raw, 0),
   }));
   curve.sort((a, b) => b.raw - a.raw || b.threshold - a.threshold);
   return { threshold:curve[0].threshold, developmentCurve:curve.sort((a,b)=>a.threshold-b.threshold) };
