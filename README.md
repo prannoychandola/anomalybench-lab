@@ -122,9 +122,9 @@ This pinned NAB v1.1 run selects thresholds using 15 development series and eval
 
 | Detector | Threshold | NAB standard (95% CI) | Event recall (95% CI) | Point F1 (95% CI) | False alert episodes / 1k clean points |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Rolling robust z-score | 0.995 | -195.11 (-365.608–-76.812) | 56.3% (0.432–0.696) | 0.0450 (0.026–0.068) | 9.2 |
-| Adaptive EWMA residual | 0.950 | 23.51 (10.139–36.099) | 51.2% (0.360–0.671) | 0.0046 (0.003–0.006) | 1.6 |
-| Seasonal residual (lag 48) | 0.995 | -206.81 (-390.070–-67.799) | 51.2% (0.372–0.650) | 0.0445 (0.024–0.067) | 6.7 |
+| Rolling robust z-score | 0.995 | -195.11 (-365.608–-76.812) | 56.3% (43.2–69.6%) | 0.0450 (0.026–0.068) | 9.2 |
+| Adaptive EWMA residual | 0.950 | 23.51 (10.139–36.099) | 51.2% (36.0–67.1%) | 0.0046 (0.003–0.006) | 1.6 |
+| Seasonal residual (lag 48) | 0.995 | -206.81 (-390.070–-67.799) | 51.2% (37.2–65.0%) | 0.0445 (0.024–0.067) | 6.7 |
 
 Adaptive EWMA has the highest NAB standard score on this held-out split. Point-level F1 is much lower than event recall because one alert can count as detecting a long event window, while point-level recall counts the many remaining labeled observations as missed. Rolling robust z-score and seasonal residual find slightly more events but create many more separate alerts. Alert episodes are matched one-to-one to labeled events; repeated alerts inside one event are not all counted as successful matches.
 
