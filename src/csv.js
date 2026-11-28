@@ -12,6 +12,7 @@ function parseCsvLine(line) {
       cells.push(cell); cell = "";
     } else cell += ch;
   }
+  if (quoted) throw new Error("CSV row contains an unterminated quoted field.");
   cells.push(cell);
   return cells;
 }
@@ -27,16 +28,18 @@ function parseSeriesCsv(text) {
   }
   const records = lines.slice(1).map((line, i) => {
     const cells = parseCsvLine(line);
-    const timestamp = cells[timeIndex]?.trim();
-    const value = Number(cells[valueIndex]);
-    const time = Date.parse(timestamp);
-    if (!timestamp || !Number.isFinite(time)) throw new Error(`Row ${i + 2} has an invalid timestamp.`);
+    const timestamp = cells[timeIndex]?.trim() || null;
+    const rawValue = cells[valueIndex]?.trim();
+    const value = rawValue === "" || rawValue == null ? NaN : Number(rawValue);
     if (!Number.isFinite(value)) throw new Error(`Row ${i + 2} has an invalid numeric value.`);
-    return { timestamp, time, value };
+    const time = timestamp ? Date.parse(timestamp) : NaN;
+    if (timestamp && !Number.isFinite(time)) throw new Error(`Row ${i + 2} has an invalid timestamp.`);
+    // Missing timestamps are retained for causal detector input but excluded
+    // from timestamp-window metrics because their label cannot be established.
+    return { timestamp, time: Number.isFinite(time) ? time : null, value };
   });
   // Preserve source row order: streaming detectors must see the original sequence.
   return records;
 }
 
 module.exports = { parseCsvLine, parseSeriesCsv };
-
