@@ -20,3 +20,12 @@ test("bundled NAB v1.1 series and labels have matching coverage",()=>{
   assert.ok(files.every(name=>Object.hasOwn(labels,name)));
 });
 
+
+test("every bundled series is a parseable CSV with usable observations",()=>{
+  const {parseSeriesCsv}=require("../src/csv");
+  for(const file of csvFiles(dataRoot)){
+    const records=parseSeriesCsv(fs.readFileSync(path.join(dataRoot,file),"utf8"));
+    assert.ok(records.length>0,file);
+    assert.ok(records.every(row=>Number.isFinite(row.value)),file);
+  }
+});
