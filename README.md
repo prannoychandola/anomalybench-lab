@@ -74,11 +74,12 @@ AnomalyBench-Lab/
 │   ├── demo.csv
 │   └── nab/                  # NAB series, labels, profiles, license, provenance
 ├── results/
-│   └── nab-v1.1-report.json  # Checked-in benchmark output
+│   └── nab-v1.1-report.json  # Held-out metrics and bootstrap intervals
 ├── scripts/
 │   └── run_benchmark.js      # Reproduce the evaluation report
 ├── src/                      # CSV parsing, detectors, split, metrics
 ├── tests/                    # Automated checks
+├── .github/workflows/tests.yml # Node 18/20/22 tests and full report validation
 ├── web/                      # Interactive dashboard
 ├── server.js
 ├── start.bat
@@ -102,17 +103,14 @@ Then open [http://127.0.0.1:8000](http://127.0.0.1:8000). Stop the server with `
 
 ## 🧪 Reproduce and Test
 
-Run the automated checks:
+Run the automated checks and regenerate the held-out report:
 
 ```bash
-node --test
+npm test
+npm run benchmark
 ```
 
-Regenerate the benchmark report:
-
-```bash
-node scripts/run_benchmark.js
-```
+GitHub Actions runs the test suite on Node.js 18, 20, and 22, regenerates the report, and validates its schema, counts, and confidence intervals.
 
 The benchmark processes the bundled NAB data locally and writes `results/nab-v1.1-report.json`.
 
